@@ -1,0 +1,49 @@
+.iconLocation {
+  width: 21px;
+  height: 26px;
+  position: relative;
+}
+.infoTitles {
+  text-decoration: none;
+  position: relative;
+  letter-spacing: 0.05em;
+  color: inherit;
+  display: inline-block;
+  min-width: 117px;
+}
+.ruaJacintoFavoreto {
+  margin: 0;
+}
+.card1,
+.infoDetails {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+.infoDetails {
+  align-self: stretch;
+  height: 46px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  text-align: center;
+}
+.card1 {
+  width: 307px;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-base-5);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .infoTitles {
+    font-size: var(--font-size-base);
+  }
+  .infoDetails {
+    font-size: var(--font-size-lgi);
+  }
+}

@@ -1,0 +1,118 @@
+.reviewDetails,
+.text1 {
+  position: relative;
+  display: inline-block;
+}
+.text1 {
+  font-weight: 500;
+  max-width: 100%;
+}
+.reviewDetails {
+  margin: 0;
+  height: 36px;
+  font-size: var(--font-size-31xl);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-smi);
+  max-width: 100%;
+}
+.imgIcon {
+  width: 98px;
+  height: 98px;
+  position: relative;
+  object-fit: cover;
+}
+.servioImpecvelE {
+  margin: 0;
+}
+.customerReviews {
+  align-self: stretch;
+  position: relative;
+}
+.name {
+  position: relative;
+  font-size: var(--font-size-lg);
+  text-align: left;
+}
+.card1 {
+  width: 356px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-25xl);
+  max-width: 100%;
+}
+.cards,
+.reviews,
+.testimonials {
+  align-self: stretch;
+  display: flex;
+  max-width: 100%;
+}
+.cards {
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  text-align: center;
+}
+.reviews,
+.testimonials {
+  flex-direction: column;
+  align-items: center;
+}
+.reviews {
+  justify-content: flex-start;
+  gap: var(--gap-41xl);
+}
+.testimonials {
+  background-color: var(--color-white);
+  justify-content: center;
+  padding: var(--padding-41xl) var(--padding-53xl);
+  box-sizing: border-box;
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1325px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  .reviewDetails {
+    font-size: var(--font-size-21xl);
+  }
+  .reviews {
+    gap: var(--gap-11xl);
+  }
+  .testimonials {
+    padding: var(--padding-20xl) var(--padding-17xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .text1 {
+    font-size: var(--font-size-lgi);
+  }
+  .reviewDetails {
+    font-size: var(--font-size-11xl);
+  }
+  .customerReviews {
+    font-size: var(--font-size-lgi);
+  }
+  .card1 {
+    gap: var(--gap-3xl);
+  }
+}

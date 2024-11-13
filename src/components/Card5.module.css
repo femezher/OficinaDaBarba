@@ -1,0 +1,40 @@
+.iconEnvelope {
+  width: 26px;
+  height: 20px;
+  position: relative;
+}
+.text1,
+.text2 {
+  position: relative;
+  display: inline-block;
+}
+.text1 {
+  letter-spacing: 0.05em;
+  min-width: 66px;
+}
+.text2 {
+  height: 17px;
+  font-size: var(--font-size-5xl);
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+.card2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  gap: var(--gap-base-5);
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .text1 {
+    font-size: var(--font-size-base);
+  }
+  .text2 {
+    font-size: var(--font-size-lgi);
+  }
+}

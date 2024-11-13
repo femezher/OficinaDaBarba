@@ -1,0 +1,108 @@
+.reviewSubtitle,
+.reviewTitle {
+  position: relative;
+  display: inline-block;
+}
+.reviewTitle {
+  font-weight: 500;
+  max-width: 100%;
+}
+.reviewSubtitle {
+  margin: 0;
+  height: 36px;
+  font-size: var(--font-size-31xl);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: inherit;
+  flex-shrink: 0;
+}
+.cards,
+.text {
+  display: flex;
+  max-width: 100%;
+}
+.text {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-smi);
+}
+.cards {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--gap-xl);
+  text-align: center;
+}
+.reviews,
+.testimonials,
+.testimonialsParent {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+.reviews {
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-41xl);
+}
+.testimonials,
+.testimonialsParent {
+  box-sizing: border-box;
+}
+.testimonials {
+  background-color: var(--color-white);
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-41xl) var(--padding-53xl);
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+.testimonialsParent {
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0; /* Remove o padding inferior */
+  /* min-height: 1112px; */ /* Remova ou ajuste este valor */
+  flex-shrink: 0;
+}
+@media screen and (max-width: 1325px) {
+  .cards {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 1125px) {
+  .testimonialsParent {
+    padding-bottom: var(--padding-350xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 800px) {
+  .reviewSubtitle {
+    font-size: var(--font-size-21xl);
+  }
+  .reviews {
+    gap: var(--gap-11xl);
+  }
+  .testimonials {
+    padding: var(--padding-20xl) var(--padding-17xl);
+    box-sizing: border-box;
+  }
+  .testimonialsParent {
+    padding-bottom: var(--padding-221xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .reviewTitle {
+    font-size: var(--font-size-lgi);
+  }
+  .reviewSubtitle {
+    font-size: var(--font-size-11xl);
+  }
+}

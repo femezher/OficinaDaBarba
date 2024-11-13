@@ -1,0 +1,61 @@
+.iconBeard {
+  height: 79px;
+  width: 91px;
+  position: relative;
+}
+.iconBeardWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-12xs) 0 0;
+}
+.text1 {
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.duisPortaLigula {
+  margin: 0;
+}
+.serviceDescriptions {
+  width: 242px;
+  position: relative;
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card3,
+.serviceDescriptionsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-9xl) 0 var(--padding-8xl);
+  text-align: center;
+  font-size: var(--font-size-base);
+}
+.card3 {
+  border: 2px solid var(--color-white);
+  box-sizing: border-box;
+  flex-direction: column;
+  padding: var(--padding-60xl) var(--padding-38xl) var(--padding-52xl);
+  gap: var(--gap-lgi);
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .text1 {
+    font-size: var(--font-size-lgi);
+  }
+  .card3 {
+    padding: var(--padding-32xl) var(--padding-xl) var(--padding-27xl);
+    box-sizing: border-box;
+  }
+}

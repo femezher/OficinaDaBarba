@@ -1,0 +1,254 @@
+.heroBackground {
+  height: 109px;
+  width: 100%;
+  position: absolute;
+  margin: 0 !important;
+  top: 0;
+  right: 0;
+  left: 0;
+  background-color: var(--color-black);
+}
+.irPara,
+.topo {
+  text-decoration: none;
+  position: absolute;
+  color: inherit;
+  display: inline-block;
+}
+.irPara {
+  height: 17px;
+  margin: 0 !important;
+  right: 582px;
+  bottom: -10px;
+  min-width: 74px;
+  white-space: nowrap;
+}
+.topo {
+  top: 5px;
+  left: 10px;
+  font-weight: 700;
+  min-width: 59px;
+}
+.menuBackgrounds {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1.5px solid var(--color-white);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+}
+.topoParent {
+  height: 30px;
+  width: 80px;
+  position: absolute;
+  margin: 0 !important;
+  right: 469px;
+  bottom: -18px;
+}
+.contedo {
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  left: 4.1px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  width: 121.9px;
+  min-width: 121.9px;
+}
+.frameChild {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 1.5px solid var(--color-white);
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+.contedoParent {
+  height: 30px;
+  width: 126px;
+  position: absolute;
+  margin: 0 !important;
+  right: 225px;
+  bottom: -18px;
+}
+.rodap {
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  width: 95.2px;
+  min-width: 95.2px;
+}
+.rodapParent {
+  height: 30px;
+  width: 107px;
+  position: absolute;
+  margin: 0 !important;
+  right: 102px;
+  bottom: -18px;
+}
+.menu1 {
+  text-decoration: none;
+  position: absolute;
+  top: 5px;
+  left: 8px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  min-width: 67px;
+}
+.menuParent {
+  height: 30px;
+  width: 80px;
+  right: 370px;
+  bottom: -18px;
+}
+.burgerMenuIcon,
+.incio,
+.menuParent,
+.servios {
+  position: absolute;
+  margin: 0 !important;
+}
+.burgerMenuIcon {
+  height: 22px;
+  width: 20px;
+  right: 66px;
+  bottom: -14px;
+  object-fit: contain;
+}
+.incio,
+.servios {
+  bottom: -19px;
+}
+.incio {
+  text-decoration: none;
+  left: 54px;
+  color: var(--color-darkgray);
+  display: inline-block;
+  min-width: 61px;
+  cursor: pointer;
+}
+.servios {
+  left: 156px;
+  min-width: 99px;
+}
+.contateNos,
+.servios,
+.sobreNs {
+  text-decoration: none;
+  color: var(--color-darkgray);
+  display: inline-block;
+  cursor: pointer;
+}
+.sobreNs {
+  position: absolute;
+  margin: 0 !important;
+  bottom: -19px;
+  left: 284px;
+  min-width: 116px;
+  white-space: nowrap;
+}
+.contateNos {
+  height: 17px;
+}
+.contateNos,
+.galeria,
+.menu {
+  position: relative;
+}
+.galeria {
+  text-decoration: none;
+  height: 17px;
+  font-weight: 700;
+  color: inherit;
+  display: inline-block;
+  min-width: 85px;
+  cursor: pointer;
+}
+.menu {
+  height: 13px;
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-10xs) var(--padding-406xl) 0;
+  box-sizing: border-box;
+  gap: var(--gap-11xl);
+  max-width: 100%;
+  z-index: 1;
+}
+.heroCaption {
+  margin: 0 !important;
+  height: 51px;
+  position: absolute;
+  bottom: 124px;
+  left: 556px;
+  font-size: var(--font-size-51xl);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  white-space: nowrap;
+}
+.hero {
+  align-self: stretch;
+  height: 381px;
+  overflow: hidden;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-21xl) 0;
+  box-sizing: border-box;
+  position: sticky;
+  gap: var(--gap-81xl);
+  background-image: url(/public/hero4@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  top: 0;
+  z-index: 99;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1125px) {
+  .menu {
+    padding-left: var(--padding-193xl);
+    padding-right: var(--padding-193xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 800px) {
+  .menu {
+    gap: var(--gap-mini);
+    padding-left: var(--padding-87xl);
+    padding-right: var(--padding-87xl);
+    box-sizing: border-box;
+  }
+  .hero {
+    gap: var(--gap-31xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .menu {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .hero {
+    gap: var(--gap-6xl);
+  }
+}

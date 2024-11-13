@@ -1,0 +1,103 @@
+.brandTitle {
+  margin: 0;
+  position: relative;
+  font-size: inherit;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-family: inherit;
+}
+.vestibulumCommodoSapien {
+  margin: 0;
+}
+.brandSubtitle {
+  height: 57px;
+  position: relative;
+  font-size: var(--font-size-lg);
+  display: inline-block;
+  max-width: 100%;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-smi);
+  max-width: 100%;
+}
+.lineIcon {
+  height: 428px;
+  width: 2px;
+  position: relative;
+}
+.divider {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) var(--padding-5xs) var(--padding-3xs)
+    var(--padding-3xs);
+}
+.img1Icon,
+.img2Icon {
+  height: 108px;
+  width: 150px;
+  position: relative;
+  object-fit: cover;
+}
+.img2Icon {
+  mix-blend-mode: screen;
+}
+.brands,
+.logos {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.logos {
+  width: 510px;
+  filter: blur(0);
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  align-content: flex-start;
+  gap: 30px 26px;
+  min-height: 246px;
+}
+.brands {
+  align-self: stretch;
+  background-color: var(--color-gray-100);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-41xl) var(--padding-111xl);
+  box-sizing: border-box;
+  gap: var(--gap-xl);
+  width: 100%;
+  text-align: left;
+  font-size: var(--font-size-26xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1325px) {
+  .brands {
+    flex-wrap: wrap;
+    padding-left: var(--padding-46xl);
+    padding-right: var(--padding-46xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 800px) {
+  .brandTitle {
+    font-size: var(--font-size-17xl);
+  }
+  .brands {
+    padding: var(--padding-20xl) var(--padding-13xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .brandTitle {
+    font-size: var(--font-size-8xl);
+  }
+}

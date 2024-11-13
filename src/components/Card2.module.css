@@ -1,0 +1,55 @@
+.iconBarbershop {
+  height: 48.7px;
+  width: 57.7px;
+  position: relative;
+}
+.iconBarbershopWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.barbershopLabel,
+.barbershopValue {
+  position: relative;
+  letter-spacing: 0.05em;
+}
+.barbershopValue {
+  width: 98px;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.barbershopLabel {
+  align-self: stretch;
+  font-size: var(--font-size-3xl);
+  text-align: center;
+}
+.card3 {
+  width: 278px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 var(--padding-9xs-3) 0;
+  box-sizing: border-box;
+  gap: var(--gap-11xl);
+  text-align: left;
+  font-size: var(--font-size-51xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 800px) {
+  .barbershopValue {
+    font-size: var(--font-size-37xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .barbershopValue {
+    font-size: var(--font-size-23xl);
+  }
+  .barbershopLabel {
+    font-size: var(--font-size-lg);
+  }
+}

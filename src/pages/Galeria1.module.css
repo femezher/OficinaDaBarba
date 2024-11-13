@@ -1,0 +1,373 @@
+/* Definição das variáveis em unidades relativas */
+:root {
+  /* fonts */
+  --font-inter: Inter;
+  --font-abril-fatface: "Abril Fatface";
+
+  /* font sizes */
+  --font-size-sm: 0.875rem;         /* 14px / 16 */
+  --font-size-base: 1rem;           /* 16px / 16 */
+  --font-size-mid: 1.0625rem;       /* 17px / 16 */
+  --font-size-lg: 1.125rem;         /* 18px / 16 */
+  --font-size-lgi: 1.1875rem;       /* 19px / 16 */
+  --font-size-xl: 1.25rem;          /* 20px / 16 */
+  --font-size-3xl: 1.375rem;        /* 22px / 16 */
+  --font-size-5xl: 1.5rem;          /* 24px / 16 */
+  --font-size-6xl: 1.5625rem;       /* 25px / 16 */
+  --font-size-8xl: 1.6875rem;       /* 27px / 16 */
+  --font-size-9xl: 1.75rem;         /* 28px / 16 */
+  --font-size-11xl: 1.875rem;       /* 30px / 16 */
+  --font-size-17xl: 2.25rem;        /* 36px / 16 */
+  --font-size-21xl: 2.5rem;         /* 40px / 16 */
+  --font-size-23xl: 2.625rem;       /* 42px / 16 */
+  --font-size-26xl: 2.8125rem;      /* 45px / 16 */
+  --font-size-29xl: 3rem;           /* 48px / 16 */
+  --font-size-31xl: 3.125rem;       /* 50px / 16 */
+  --font-size-37xl: 3.5rem;         /* 56px / 16 */
+  --font-size-41xl: 3.75rem;        /* 60px / 16 */
+  --font-size-51xl: 4.375rem;       /* 70px / 16 */
+
+  /* Colors */
+  --color-white: #fff;
+  --color-black: #000;
+  --color-gray-100: #212121;
+  --default-white: rgba(0, 0, 0, 0.65);
+  --color-gainsboro-100: #e6e6e6;
+  --color-gainsboro-200: #d9d9d9;
+  --color-gainsboro-300: rgba(230, 230, 230, 0.09);
+  --color-darkgray: #979797;
+
+  /* Gaps */
+  --gap-mini: 0.9375rem;            /* 15px / 16 */
+  --gap-lgi: 1.1875rem;             /* 19px / 16 */
+  --gap-xl: 1.25rem;                /* 20px / 16 */
+  --gap-smi: 0.8125rem;             /* 13px / 16 */
+  --gap-16xl: 2.1875rem;            /* 35px / 16 */
+  --gap-mid: 1.0625rem;             /* 17px / 16 */
+  --gap-18xl: 2.3125rem;            /* 37px / 16 */
+  --gap-21xl: 2.5rem;               /* 40px / 16 */
+  --gap-3xs: 0.625rem;              /* 10px / 16 */
+  --gap-56xl: 4.6875rem;            /* 75px / 16 */
+  --gap-61xl: 5rem;                 /* 80px / 16 */
+
+  /* Paddings */
+  --padding-8xs: 0.3125rem;         /* 5px / 16 */
+  --padding-21xl: 2.5rem;           /* 40px / 16 */
+  --padding-40xl: 3.75rem;          /* 60px / 16 */
+  --padding-41xl: 3.75rem;          /* 60px / 16 */
+  --padding-53xl: 4.5rem;           /* 72px / 16 */
+  --padding-20xl: 2.4375rem;        /* 39px / 16 */
+  --padding-17xl: 2.25rem;          /* 36px / 16 */
+  --padding-3xs: 0.625rem;          /* 10px / 16 */
+  --padding-5xs: 0.5rem;            /* 8px / 16 */
+  --padding-mini: 0.9375rem;        /* 15px / 16 */
+  --padding-sm: 0.875rem;           /* 14px / 16 */
+  --padding-xl: 1.25rem;            /* 20px / 16 */
+  --padding-29xl: 3rem;             /* 48px / 16 */
+  --padding-17xl: 2.25rem;          /* 36px / 16 */
+  --padding-128xl: 8rem;            /* 128px / 16 */
+  --padding-9xl: 1.75rem;           /* 28px / 16 */
+  --padding-base: 1rem;             /* 16px / 16 */
+  --padding-51xl: 4.6875rem;        /* 75px / 16 */
+  --padding-39xl: 3.625rem;         /* 58px / 16 */
+  --padding-85xl: 6.5625rem;        /* 105px / 16 */
+  --padding-6xl: 1.5625rem;         /* 25px / 16 */
+  --padding-24xl: 3.75rem;          /* 60px / 16 */
+  --padding-2xl: 1.25rem;           /* 20px / 16 */
+
+  /* Border radiuses */
+  --br-xl: 1.25rem; /* 20px / 16 = 1.25rem */
+}
+
+/* Estilos existentes, convertendo px para rem */
+
+.text11 {
+  margin: 0;
+  height: 2.25rem; /* 36px / 16 */
+  position: relative;
+  font-size: inherit;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.text1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  max-width: 100%;
+}
+
+.cards {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0;
+  gap: var(--gap-56xl);
+}
+
+.lineIcon,
+.text {
+  align-self: stretch;
+  max-width: 100%;
+}
+
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-61xl);
+}
+
+.lineIcon {
+  position: relative;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.divider {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) 0 var(--padding-5xs);
+}
+
+.copyright {
+  position: relative;
+  font-size: var(--font-size-mid);
+}
+
+.footer,
+.galeria {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.footer {
+  align-self: stretch;
+  align-items: center;
+  padding: var(--padding-41xl) var(--padding-53xl);
+  box-sizing: border-box;
+  gap: var(--gap-16xl);
+  flex-shrink: 0;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-31xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.galeria {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* Estilos para os botões de ajuste de fonte */
+.fontSizeControls {
+  position: fixed;
+  top: 0.625rem; /* 10px / 16 */
+  right: 0.625rem; /* 10px / 16 */
+  z-index: 1000; /* Garante que os botões fiquem acima de outros elementos */
+  display: flex;
+  gap: 0.3125rem; /* 5px / 16 */
+}
+
+.fontSizeButton {
+  background-color: #fff;
+  border: 0.0625rem solid #000; /* 1px / 16 */
+  padding: 0.3125rem 0.625rem; /* 5px, 10px */
+  cursor: pointer;
+  font-size: 1rem; /* 16px / 16 */
+}
+
+.fontSizeButton:hover {
+  background-color: #f0f0f0;
+}
+
+.frameParent,
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  max-width: 100%;
+}
+
+.testimonials {
+  width: 100%;
+  /* height: 380px; */ /* Remover esta linha */
+  min-height: 23.75rem; /* 380px / 16 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--padding-41xl) var(--padding-53xl);
+  box-sizing: border-box;
+  position: relative;
+  background-image: url(/public/testimonials@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  z-index: 1;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.frameParent {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-shrink: 0;
+}
+
+.text13 {
+  margin: 0;
+  height: 2.25rem; /* 36px / 16 */
+  position: relative;
+  font-size: inherit;
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  flex-shrink: 0;
+}
+
+.cards1,
+.text5 {
+  display: flex;
+  padding: 0;
+}
+
+.text5 {
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+
+.cards1 {
+  align-self: stretch;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  gap: var(--gap-56xl);
+}
+
+.lineIcon,
+.text4 {
+  align-self: stretch;
+  max-width: 100%;
+}
+
+.text4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-61xl);
+}
+
+.lineIcon {
+  position: relative;
+  overflow: hidden;
+  max-height: 100%;
+}
+
+.divider {
+  align-self: stretch;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-3xs) 0 var(--padding-5xs);
+}
+
+.copyright {
+  position: relative;
+  font-size: var(--font-size-mid);
+}
+
+.footer,
+.galeria {
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  box-sizing: border-box;
+}
+
+.footer {
+  align-self: stretch;
+  align-items: center;
+  padding: var(--padding-41xl) var(--padding-53xl);
+  box-sizing: border-box;
+  gap: var(--gap-16xl);
+  flex-shrink: 0;
+  max-width: 100%;
+  text-align: left;
+  font-size: var(--font-size-31xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+
+.galeria {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  align-items: flex-start;
+  line-height: normal;
+  letter-spacing: normal;
+}
+
+/* Media Queries */
+@media screen and (max-width: 81.25rem) { /* 1300px / 16 */
+  .cards {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 50rem) { /* 800px / 16 */
+  .text11 {
+    font-size: var(--font-size-21xl);
+  }
+  .cards {
+    gap: var(--gap-18xl);
+  }
+  .text {
+    gap: var(--gap-21xl);
+  }
+  .footer {
+    gap: var(--gap-mid);
+    padding: var(--padding-20xl) var(--padding-17xl);
+    box-sizing: border-box;
+  }
+}
+
+@media screen and (max-width: 28.125rem) { /* 450px / 16 */
+  .text11 {
+    font-size: var(--font-size-11xl);
+  }
+  .cards {
+    gap: var(--gap-lgi);
+  }
+  .text {
+    gap: var(--gap-xl);
+  }
+}

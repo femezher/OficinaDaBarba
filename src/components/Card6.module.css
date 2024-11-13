@@ -1,0 +1,54 @@
+.iconClock {
+  width: 25px;
+  height: 25px;
+  position: relative;
+}
+.text1 {
+  height: 15px;
+  position: relative;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  min-width: 98px;
+}
+.text1Wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+}
+.segSex {
+  margin: 0;
+}
+.scheduleLabel {
+  align-self: stretch;
+  height: 46px;
+  position: relative;
+  font-size: var(--font-size-5xl);
+  text-align: center;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.card4 {
+  width: 263px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  box-sizing: border-box;
+  gap: var(--gap-lg);
+  flex-shrink: 0;
+  text-align: left;
+  font-size: var(--font-size-xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .text1 {
+    font-size: var(--font-size-base);
+  }
+  .scheduleLabel {
+    font-size: var(--font-size-lgi);
+  }
+}

@@ -1,0 +1,340 @@
+.contactInputs,
+.subjectPlaceholder {
+  position: relative;
+  letter-spacing: 0.05em;
+}
+.contactInputs {
+  margin: 0;
+  font-size: var(--font-size-41xl);
+  font-weight: 700;
+  font-family: inherit;
+  text-align: left;
+  white-space: nowrap;
+}
+.subjectPlaceholder {
+  flex: 1;
+  font-weight: 600;
+}
+.subjectLabel {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 0 var(--padding-69xl) 0 var(--padding-70xl);
+}
+.ruaJacintoFavoreto {
+  margin: 0;
+}
+.subjectDescription {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-5xl);
+}
+.subjectContent {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: flex-start;
+  gap: var(--gap-smi);
+}
+.messageLabel,
+.subjectInput {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-smi);
+}
+.messageLabel {
+  padding: 0 var(--padding-81xl) 0 var(--padding-82xl);
+}
+.messageDescription {
+  position: relative;
+  font-size: var(--font-size-5xl);
+}
+.messageContent {
+  flex: 1;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: var(--gap-sm);
+}
+.buttonLabel,
+.cards,
+.messageContent,
+.submitButton {
+  display: flex;
+  align-items: flex-start;
+}
+.buttonLabel {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding: 0 var(--padding-55xl);
+}
+.cards,
+.submitButton {
+  justify-content: flex-start;
+}
+.submitButton {
+  align-self: stretch;
+  flex-direction: row;
+  padding: 0 var(--padding-16xl);
+}
+.cards {
+  flex: 0.6025;
+  flex-direction: column;
+  padding: var(--padding-20xl) var(--padding-131xl) var(--padding-20xl)
+    var(--padding-132xl);
+  box-sizing: border-box;
+  gap: var(--gap-3xl);
+  min-width: 413px;
+  max-width: 100%;
+}
+.nameLabel {
+  position: relative;
+  line-height: 20px;
+  display: inline-block;
+  min-width: 77px;
+}
+.field,
+.name {
+  display: flex;
+  justify-content: flex-start;
+}
+.field {
+  width: 266px;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-sm) var(--padding-base);
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-base);
+  color: var(--default-white);
+  min-width: 160px;
+}
+.name {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-7xs);
+  min-width: 173px;
+}
+.emailLabel {
+  position: relative;
+  line-height: 20px;
+  display: inline-block;
+  min-width: 75px;
+}
+.field1,
+.inputs {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.field1 {
+  width: 266px;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  align-items: center;
+  padding: var(--padding-sm) var(--padding-mini);
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-base);
+  color: var(--default-white);
+  min-width: 160px;
+}
+.inputs {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: var(--gap-5xl);
+}
+.text {
+  position: relative;
+  line-height: 20px;
+}
+.field2,
+.subject {
+  align-self: stretch;
+  display: flex;
+  justify-content: flex-start;
+}
+.field2 {
+  width: 100%;
+  border: 0;
+  outline: 0;
+  background-color: var(--color-white);
+  height: 48px;
+  flex-direction: row;
+  align-items: center;
+  padding: var(--padding-sm) var(--padding-base);
+  box-sizing: border-box;
+  font-family: var(--font-inter);
+  font-size: var(--font-size-base);
+  color: var(--default-white);
+  min-width: 250px;
+}
+.subject {
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--gap-7xs);
+}
+.text1 {
+  position: relative;
+  line-height: 20px;
+  display: inline-block;
+  min-width: 118px;
+}
+.field3,
+.terxt {
+  font-family: var(--font-inter);
+}
+.field3 {
+  border: 0;
+  background-color: var(--color-white);
+  height: 134px;
+  width: auto;
+  outline: 0;
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-sm) var(--padding-base);
+  box-sizing: border-box;
+  font-size: var(--font-size-base);
+  color: var(--default-white);
+}
+.terxt {
+  position: relative;
+  font-size: var(--font-size-xl);
+  line-height: 20px;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--color-black);
+  text-align: left;
+  display: inline-block;
+  min-width: 76px;
+}
+.button {
+  cursor: pointer;
+  border: 0;
+  padding: var(--padding-lg) var(--padding-221xl);
+  background-color: var(--color-white);
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.button:hover {
+  background-color: var(--color-gainsboro-100);
+}
+.card2,
+.form {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.card2 {
+  flex: 1;
+  background-color: var(--color-gray-100);
+  flex-direction: column;
+  padding: var(--padding-21xl);
+  gap: var(--gap-9xl);
+  min-width: 413px;
+  text-align: left;
+  font-size: var(--font-size-base);
+}
+.form {
+  align-self: stretch;
+  flex-direction: row;
+  padding: var(--padding-101xl) var(--padding-53xl) var(--padding-41xl);
+  gap: var(--gap-5xl);
+  background-image: url(/public/form@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: center;
+  font-size: var(--font-size-6xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1325px) {
+  .form {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 800px) {
+  .contactInputs {
+    font-size: var(--font-size-29xl);
+  }
+  .cards {
+    padding: var(--padding-6xl) var(--padding-56xl);
+    box-sizing: border-box;
+    min-width: 100%;
+    flex: 1;
+  }
+  .inputs {
+    flex-wrap: wrap;
+  }
+  .card2,
+  .form {
+    box-sizing: border-box;
+  }
+  .card2 {
+    padding-top: var(--padding-7xl);
+    padding-bottom: var(--padding-7xl);
+    min-width: 100%;
+  }
+  .form {
+    padding: var(--padding-59xl) var(--padding-17xl) var(--padding-20xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .contactInputs {
+    font-size: var(--font-size-17xl);
+  }
+  .subjectPlaceholder {
+    font-size: var(--font-size-xl);
+  }
+  .subjectLabel {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .subjectDescription {
+    font-size: var(--font-size-lgi);
+  }
+  .messageLabel {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .messageDescription {
+    font-size: var(--font-size-lgi);
+  }
+  .buttonLabel,
+  .cards {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+  .terxt {
+    font-size: var(--font-size-base);
+    line-height: 16px;
+  }
+  .button {
+    padding-left: var(--padding-xl);
+    padding-right: var(--padding-xl);
+    box-sizing: border-box;
+  }
+}

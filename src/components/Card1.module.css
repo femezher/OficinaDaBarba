@@ -1,0 +1,55 @@
+.iconRazor {
+  height: 71.9px;
+  width: 39.2px;
+  position: relative;
+}
+.iconRazorWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 0 var(--padding-xl);
+}
+.counterValues {
+  align-self: stretch;
+  white-space: nowrap;
+}
+.counterLabels,
+.counterValues {
+  position: relative;
+  letter-spacing: 0.05em;
+}
+.card1,
+.counterLabelsWrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-8xl);
+  font-size: var(--font-size-3xl);
+}
+.card1 {
+  width: 236px;
+  flex-direction: column;
+  padding: 0 0 var(--padding-8xs-1) 0;
+  box-sizing: border-box;
+  gap: var(--gap-lg);
+  text-align: left;
+  font-size: var(--font-size-51xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 800px) {
+  .counterValues {
+    font-size: var(--font-size-37xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .counterValues {
+    font-size: var(--font-size-23xl);
+  }
+  .counterLabels {
+    font-size: var(--font-size-lg);
+  }
+}

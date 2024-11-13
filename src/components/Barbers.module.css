@@ -1,0 +1,202 @@
+.barbersDescription,
+.barbersHeading {
+  position: relative;
+  display: inline-block;
+  flex-shrink: 0;
+}
+.barbersHeading {
+  align-self: stretch;
+  height: 36px;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.barbersDescription {
+  margin: 0;
+  height: 44px;
+  font-size: var(--font-size-41xl);
+  letter-spacing: 0.05em;
+  font-weight: 700;
+  font-family: inherit;
+  color: var(--color-black);
+  text-align: left;
+  max-width: 100%;
+}
+.text {
+  width: 738px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0 var(--padding-xl);
+  box-sizing: border-box;
+  gap: var(--gap-6xl);
+  max-width: 100%;
+}
+.imgIcon {
+  align-self: stretch;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+  object-fit: cover;
+}
+.name,
+.socialsIcon {
+  position: absolute;
+  margin: 0 !important;
+}
+.name {
+  height: 16px;
+  top: 57px;
+  left: 82px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+.socialsIcon {
+  width: 21.22%;
+  height: 8.33%;
+  top: 58.89%;
+  right: 39.51%;
+  bottom: 32.78%;
+  left: 39.27%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.card1,
+.text1 {
+  display: flex;
+  flex-direction: column;
+}
+.text1 {
+  align-self: stretch;
+  height: 180px;
+  background-color: var(--color-gray-100);
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-11xl) 0;
+  box-sizing: border-box;
+  position: relative;
+}
+.card1 {
+  height: 520px;
+  flex: 1;
+  align-items: flex-start;
+  justify-content: flex-end;
+  background-image: url(/public/card-11@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 389px;
+  max-width: 100%;
+}
+.name1 {
+  height: 16px;
+  position: absolute;
+  margin: 0 !important;
+  top: 57px;
+  left: 124.5px;
+  letter-spacing: 0.05em;
+  display: inline-block;
+}
+.card2 {
+  height: 520px;
+  flex: 1;
+  background-color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  min-width: 389px;
+  max-width: 100%;
+}
+.name2,
+.socialsIcon2 {
+  position: absolute;
+  margin: 0 !important;
+}
+.name2 {
+  height: 16px;
+  top: 57px;
+  left: 133.5px;
+  display: inline-block;
+}
+.socialsIcon2 {
+  width: 21.22%;
+  height: 8.33%;
+  top: 58.89%;
+  right: 39.39%;
+  bottom: 32.78%;
+  left: 39.39%;
+  max-width: 100%;
+  overflow: hidden;
+  max-height: 100%;
+}
+.barbers,
+.cards {
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.cards {
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: 0 var(--padding-62xl);
+  gap: 24px 20px;
+  font-size: var(--font-size-3xl);
+}
+.barbers {
+  background-color: var(--color-white);
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: var(--padding-41xl) 0;
+  gap: var(--gap-41xl);
+  text-align: center;
+  font-size: var(--font-size-xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 1125px) {
+  .barbers {
+    padding-top: var(--padding-20xl);
+    padding-bottom: var(--padding-20xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 800px) {
+  .barbersDescription {
+    font-size: var(--font-size-29xl);
+  }
+  .cards {
+    padding-left: var(--padding-21xl);
+    padding-right: var(--padding-21xl);
+    box-sizing: border-box;
+  }
+  .barbers {
+    gap: var(--gap-11xl);
+  }
+}
+@media screen and (max-width: 450px) {
+  .barbersHeading {
+    font-size: var(--font-size-base);
+  }
+  .barbersDescription {
+    font-size: var(--font-size-17xl);
+  }
+  .card1,
+  .card2 {
+    min-width: 100%;
+  }
+  .barbers {
+    padding-top: var(--padding-6xl);
+    padding-bottom: var(--padding-6xl);
+    box-sizing: border-box;
+  }
+}

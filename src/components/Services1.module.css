@@ -1,0 +1,195 @@
+.iconScissors {
+  height: 94px;
+  width: 62px;
+  position: relative;
+}
+.cardIcons {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+}
+.serviceTitles {
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.cardHeader {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 0 0 var(--padding-12xs);
+}
+.duisPortaLigula {
+  margin: 0;
+}
+.cardFooter {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-base);
+  text-align: center;
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card1 {
+  border: 2px solid var(--color-white);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-52xl) var(--padding-66xl) var(--padding-44xl);
+  gap: var(--gap-lgi);
+  max-width: 100%;
+}
+.iconRazor {
+  height: 110px;
+  flex: 1;
+  position: relative;
+  max-width: 100%;
+  overflow: hidden;
+}
+.iconRazorWrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-40xl);
+}
+.text1 {
+  flex: 1;
+  position: relative;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+}
+.text1Wrapper {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 var(--padding-mid) 0 var(--padding-lg);
+}
+.text2 {
+  align-self: stretch;
+  position: relative;
+  font-size: var(--font-size-base);
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+}
+.card2 {
+  width: 416px;
+  border: 2px solid var(--color-white);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: var(--padding-24xl) var(--padding-66xl) var(--padding-16xl);
+  gap: var(--gap-6xl);
+  max-width: 100%;
+  text-align: center;
+}
+.iconMustache {
+  width: 107px;
+  height: 31px;
+  top: 107px;
+  left: 154px;
+  z-index: 0;
+}
+.iconMustache,
+.text11,
+.text21 {
+  position: absolute;
+  margin: 0 !important;
+}
+.text11 {
+  height: 17px;
+  top: 197px;
+  left: 57px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  display: inline-block;
+  white-space: nowrap;
+  z-index: 1;
+}
+.text21 {
+  width: 242px;
+  top: 239px;
+  left: 86.5px;
+  font-size: var(--font-size-base);
+  text-align: center;
+  display: -webkit-inline-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  z-index: 2;
+}
+.card5,
+.services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  max-width: 100%;
+}
+.card5 {
+  height: 359px;
+  width: 416px;
+  border: 2px solid var(--color-white);
+  flex-direction: column;
+  padding: var(--padding-80xl) 0 0;
+  position: relative;
+  gap: var(--gap-6xl);
+}
+.services {
+  align-self: stretch;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  padding: var(--padding-41xl) var(--padding-53xl);
+  gap: 24px 17px;
+  background-image: url(/public/services@3x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  text-align: left;
+  font-size: var(--font-size-5xl);
+  color: var(--color-white);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 800px) {
+  .services {
+    padding: var(--padding-20xl) var(--padding-17xl);
+    box-sizing: border-box;
+  }
+}
+@media screen and (max-width: 450px) {
+  .serviceTitles {
+    font-size: var(--font-size-lgi);
+  }
+  .card1 {
+    padding: var(--padding-27xl) var(--padding-xl) var(--padding-22xl);
+    box-sizing: border-box;
+  }
+  .text1 {
+    font-size: var(--font-size-lgi);
+  }
+  .card2 {
+    padding: var(--padding-9xl) var(--padding-xl) var(--padding-4xl);
+    box-sizing: border-box;
+  }
+  .text11 {
+    font-size: var(--font-size-lgi);
+  }
+}

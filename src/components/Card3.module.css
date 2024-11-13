@@ -1,0 +1,43 @@
+.imgIcon {
+  width: 98px;
+  height: 98px;
+  position: relative;
+  object-fit: cover;
+}
+.servioImpecvelE {
+  margin: 0;
+}
+.reviewerComments {
+  margin: 0;
+  align-self: stretch;
+  position: relative;
+}
+.name {
+  height: 13px;
+  position: relative;
+  font-size: var(--font-size-lg);
+  display: inline-block;
+  text-align: left;
+  flex-shrink: 0;
+}
+.card1 {
+  width: 356px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--gap-25xl);
+  max-width: 100%;
+  text-align: center;
+  font-size: var(--font-size-5xl);
+  color: var(--color-black);
+  font-family: var(--font-inter);
+}
+@media screen and (max-width: 450px) {
+  .reviewerComments {
+    font-size: var(--font-size-lgi);
+  }
+  .card1 {
+    gap: var(--gap-3xl);
+  }
+}
