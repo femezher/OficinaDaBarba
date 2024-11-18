@@ -56,7 +56,7 @@ const Card2: FunctionComponent<Card2Type> = ({
         <img
           className={styles.iconBarbershop}
           loading="lazy"
-          alt=""
+          alt="Ícone representando a barbearia"
           src={iconBarbershop}
         />
       </div>

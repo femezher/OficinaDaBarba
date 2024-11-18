@@ -181,6 +181,8 @@
   flex-direction: row;
   align-items: flex-start;
   justify-content: flex-start;
+  
+  
 }
 .contactGallery {
   gap: var(--gap-11xl);
@@ -194,6 +196,9 @@
   position: relative;
   gap: var(--gap-288xl);
   max-width: 100%;
+  
+  
+  
 }
 .imageIcon,
 .oficinaDaBarba11 {
@@ -207,19 +212,157 @@
   bottom: 23px;
   left: calc(50% - 393px);
 }
-.imageIcon {
-  height: 114px;
-  width: 118px;
-  top: 419px;
+
+.overlay {
+  position: fixed;
+  top: 0;
   left: 0;
-  border-radius: 50%;
-  cursor: pointer;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fundo semitransparente */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
+
+.overlayContent {
+  position: relative;
+  background-color: #fff;
+  padding: 1rem;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  border-radius: 8px;
+}
+
+.panelImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Ajuste a posição do .imageIcon e .iconAndPanel conforme necessário */
+.iconAndPanel {
+  position: fixed;
+  top: 50%;
+  left: 20px; /* Ajuste a distância da borda esquerda conforme desejado */
+  transform: translateY(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  z-index: 1000;
+}
+
+
+
+
+
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .sobreNs {
+  color: #ffffff;             /* Texto branco */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .contateNos {
+  color: #ffffff;             /* Texto branco */
+  background-color: #000000; /* Fundo preto */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .galeria {
+  color: #ffffff;             /* Texto branco */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .servios {
+  color: #ffffff;             /* Texto branco */
+}
+
+
+
+
+
+/* Texto descritivo da opção */
+.optionText {
+  font-size: 1rem;
+  color: #333;
+  font-family: 'Inter', sans-serif; /* Use a fonte padrão do seu site */
+  /* Opcional: para garantir que o texto fique à esquerda */
+  text-align: left;
+  color: var(--color-black); /* Altera para preto no modo alto contraste */
+}
+
+/* Estilos para as opções de acessibilidade dentro do painel */
+.accessibilityOption {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Alinha os itens nos extremos */
+  gap: 10px;
+  /* Opcional: defina uma largura total para as opções */
+  width: 100%;
+  margin-bottom: 10px; /* Espaçamento entre as opções */
+}
+
+.accessibilityButton {
+  background-color: #fff;
+  border: 1px solid #000;
+  padding: 5px 10px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.accessibilityButton:hover {
+  background-color: #f0f0f0;
+}
+
+/* Opcional: estilizar o ícone do alto contraste */
+.accessibilityButton svg {
+  width: 1rem;
+  height: 1rem;
+}
+
+.sidePanel {
+  position: absolute;
+  top: 0; /* Alinha o topo do painel com o ícone */
+  left: calc(100% + 10px); /* Posiciona o painel à direita do ícone */
+  background-color: #fff;
+  padding: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  z-index: 1001;
+  /* Adicione sombra para destaque */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* Ajuste o tamanho do painel conforme desejado */
+    width: 400px; /* Defina a largura desejada */
+    height: auto; /* Deixe a altura automática conforme o conteúdo */
+}
+
+.closeButton {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #000;
+}
+
+.overlayImage {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Estilo do ícone */
+.imageIcon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  object-fit: cover;
+}
+
 .menuParent {
   align-self: stretch;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
+  align-items: center;
   justify-content: flex-start;
   padding: 0 0 var(--padding-1019xl);
   box-sizing: border-box;
@@ -232,6 +375,9 @@
   color: var(--color-white);
   font-family: var(--font-inter);
 }
+
+
+
 @media screen and (max-width: 1125px) {
   .menuParent {
     padding-bottom: var(--padding-656xl);

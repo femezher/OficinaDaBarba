@@ -6,6 +6,7 @@ import Card4 from "../components/Card4";
 import Card5 from "../components/Card5";
 import Card6 from "../components/Card6";
 import styles from "./Galeria.module.css";
+import AccessibilityButton from '../components/AccessibilityButton';
 
 const Galeria: FunctionComponent = () => {
   const navigate = useNavigate();
@@ -55,15 +56,8 @@ const Galeria: FunctionComponent = () => {
 
   return (
     <div className={styles.galeria}>
-      {/* Botões "A+" e "A-" */}
-      <div className={styles.fontSizeControls}>
-        <button onClick={onIncreaseFontSize} className={styles.fontSizeButton}>
-          A+
-        </button>
-        <button onClick={onDecreaseFontSize} className={styles.fontSizeButton}>
-          A-
-        </button>
-      </div>
+      {/* Inclua o componente AccessibilityButton */}
+      <AccessibilityButton />
 
       <Hero
         onIncioTextClick={onIncioTextClick}
@@ -91,6 +85,7 @@ const Galeria: FunctionComponent = () => {
             <Card5
               card2Gap="0.96875rem" /* 15.5px / 16 */
               iconEnvelope="/icon-envelope.svg"
+              altIconEnvelope="Ícone de envelope representando contato por email"
               iconEnvelopeHeight="1.25rem" /* 20px / 16 */
               text1="EMAIL"
               text2="oficinadabarba@email.com"
@@ -103,11 +98,12 @@ const Galeria: FunctionComponent = () => {
             <Card5
               card2Gap="0.65625rem" /* 10.5px / 16 */
               iconEnvelope="/icon-phone.svg"
+              altIconEnvelope="Ícone de telefone representando contato telefônico"
               iconEnvelopeHeight="1.625rem" /* 26px / 16 */
               text1="TELEFONE"
               text2="(+55) (16) 99332-9723"
               card2Width="16.9375rem" /* 271px / 16 */
-              card2Padding="0rem 0rem 0rem 0rem"
+              card2Padding="unset"
               text1MinWidth="6.9375rem" /* 111px / 16 */
               text1Display="inline-block"
               text2AlignSelf="stretch"
@@ -126,7 +122,7 @@ const Galeria: FunctionComponent = () => {
           <img
             className={styles.lineIcon}
             loading="lazy"
-            alt=""
+            alt="" // Imagem decorativa, mantém alt vazio
             src="/line-1.svg"
           />
         </div>

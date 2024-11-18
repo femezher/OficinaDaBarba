@@ -51,7 +51,7 @@ const Card4: FunctionComponent<Card4Type> = ({
       <img
         className={styles.iconLocation}
         loading="lazy"
-        alt=""
+        alt="Ícone representando localização"
         src="/icon-location.svg"
       />
       <a className={styles.infoTitles} style={infoTitlesStyle}>
@@ -59,9 +59,9 @@ const Card4: FunctionComponent<Card4Type> = ({
       </a>
       <div className={styles.infoDetails} style={infoDetailsStyle}>
         <span>
-          <p
-            className={styles.ruaJacintoFavoreto}
-          >{`Rua Jacinto Favoreto, 301, `}</p>
+          <p className={styles.ruaJacintoFavoreto}>
+            {`Rua Jacinto Favoreto, 301, `}
+          </p>
           <p className={styles.ruaJacintoFavoreto}>São Carlos - Brasil</p>
         </span>
       </div>

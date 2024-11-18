@@ -1,4 +1,4 @@
-import { FunctionComponent, useCallback, useState, useEffect } from "react";
+import { FunctionComponent, useCallback } from "react";
 import FrameComponent from "../components/FrameComponent";
 import { useNavigate } from "react-router-dom";
 import Card1 from "../components/Card1";
@@ -7,37 +7,13 @@ import FrameComponent1 from "../components/FrameComponent1";
 import Card4 from "../components/Card4";
 import Card5 from "../components/Card5";
 import Card6 from "../components/Card6";
+import AccessibilityButton from "../components/AccessibilityButton"; // Importação do AccessibilityButton
 import styles from "./HomePageLogoClienteEFont.module.css";
 
 const HomePageLogoClienteEFont: FunctionComponent = () => {
   const navigate = useNavigate();
 
-  // Estado para controlar o tamanho da fonte
-  const [fontSize, setFontSize] = useState(16); // Tamanho de fonte padrão em pixels
-
-  // Efeito para ajustar o tamanho da fonte no elemento raiz
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${fontSize}px`;
-  }, [fontSize]);
-
-  // Função para aumentar o tamanho da fonte
-  const onIncreaseFontSize = useCallback(() => {
-    setFontSize((prevSize) => {
-      const newSize = Math.min(prevSize + 2, 24);
-      console.log(`Aumentando tamanho da fonte: ${newSize}px`);
-      return newSize;
-    });
-  }, []);
-
-  // Função para diminuir o tamanho da fonte
-  const onDecreaseFontSize = useCallback(() => {
-    setFontSize((prevSize) => {
-      const newSize = Math.max(prevSize - 2, 12);
-      console.log(`Diminuindo tamanho da fonte: ${newSize}px`);
-      return newSize;
-    });
-  }, []);
-
+  // Funções de navegação
   const onButtonClick = useCallback(() => {
     navigate("/services");
   }, [navigate]);
@@ -48,23 +24,27 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
 
   return (
     <div className={styles.homePageLogoClienteEFont}>
-      {/* Botões "A+" e "A-" */}
-      <div className={styles.fontSizeControls}>
-        <button onClick={onIncreaseFontSize} className={styles.fontSizeButton}>
-          A+
-        </button>
-        <button onClick={onDecreaseFontSize} className={styles.fontSizeButton}>
-          A-
-        </button>
+      {/* Incluímos o AccessibilityButton */}
+      <AccessibilityButton />
+
+      {/* Mantemos o restante do código inalterado */}
+      {/* Se o headerContainer e heroBackground forem necessários, mantemos */}
+      <div className={styles.headerContainer}>
+        <header className={styles.heroBackground} />
       </div>
 
-      <header className={styles.heroBackground} />
       <FrameComponent />
+
       <div className={styles.frameParent}>
         <div className={styles.servicesParent}>
           <section className={styles.services}>
             <div className={styles.img}>
-              <img className={styles.imgIcon} alt="" src="/img@2x.png" />
+              {/* Alt Text Adicionado */}
+              <img
+                className={styles.imgIcon}
+                alt="Imagem ilustrativa da barbearia Oficina da Barba"
+                src="/img@2x.png"
+              />
             </div>
             <div className={styles.text}>
               <div className={styles.servicesTitle}>Nossos</div>
@@ -72,10 +52,11 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
             </div>
             <div className={styles.cards}>
               <div className={styles.card1}>
+                {/* Alt Text Adicionado */}
                 <img
                   className={styles.iconScissors}
                   loading="lazy"
-                  alt=""
+                  alt="Ícone de tesoura representando corte de cabelo"
                   src="/icon-scissors.svg"
                 />
                 <div className={styles.serviceCardTitles}>CORTE DE CABELO</div>
@@ -86,10 +67,11 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
                 </div>
               </div>
               <div className={styles.card2}>
+                {/* Alt Text Adicionado */}
                 <img
                   className={styles.iconRazor}
                   loading="lazy"
-                  alt=""
+                  alt="Ícone de navalha representando aparagem de barba"
                   src="/icon-razor.svg"
                 />
                 <div className={styles.text1}>APARAGEM DE BARBA</div>
@@ -100,10 +82,11 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
                 </div>
               </div>
               <div className={styles.card3}>
+                {/* Alt Text Adicionado */}
                 <img
                   className={styles.iconBeard}
                   loading="lazy"
-                  alt=""
+                  alt="Ícone de barba estilizada representando tratamento capilar"
                   src="/icon-beard.svg"
                 />
                 <div className={styles.serviceCardTitles}>
@@ -119,10 +102,11 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
                 </div>
               </div>
               <div className={styles.card4}>
+                {/* Alt Text Adicionado */}
                 <img
                   className={styles.iconUstache}
                   loading="lazy"
-                  alt=""
+                  alt="Ícone de bigode estilizado representando estilização"
                   src="/icon--ustache.svg"
                 />
                 <div className={styles.serviceCardTitles}>ESTILIZAÇÃO</div>
@@ -142,19 +126,24 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
           <section className={styles.counter}>
             <Card1
               iconRazor="/icon-razor-1.svg"
+              altIcon="Ícone de navalha representando barbas feitas"
               counterValues="+3000"
               counterLabels="BARBAS FEITAS"
             />
             <Card1
               card1Width="17rem" /* 272px / 16 */
               iconRazor="/icon-scissors-1.svg"
+              altIcon="Ícone de tesoura representando cortes de cabelo"
               iconRazorWidth="2.8875rem" /* 46.2px / 16 */
               counterValues="+10000"
               frameDivAlignSelf="stretch"
               counterLabels="CORTES DE CABELO"
               counterValuesAlignSelf="stretch"
             />
-            <Card2 iconBarbershop="/icon-barbershop.svg" />
+            <Card2
+              iconBarbershop="/icon-barbershop.svg"
+              altIcon="Ícone representando a barbearia moderna"
+            />
           </section>
         </div>
         <section className={styles.testimonials}>
@@ -187,12 +176,14 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
             <Card4 />
             <Card5
               iconEnvelope="/icon-envelope.svg"
+              altIcon="Ícone de envelope representando contato por email"
               text1="EMAIL"
               text2="oficinadabarba@email.com"
             />
             <Card5
               card2Gap="0.65625rem" /* 10.5px / 16 */
               iconEnvelope="/icon-phone.svg"
+              altIcon="Ícone de telefone representando contato telefônico"
               iconEnvelopeHeight="1.625rem" /* 26px / 16 */
               text1="TELEFONE"
               text2="(+55) (16) 99332-9723"
@@ -206,7 +197,12 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
           </div>
         </div>
         <div className={styles.divider}>
-          <img className={styles.lineIcon} alt="" src="/line-1.svg" />
+          {/* Alt Text Adicionado */}
+          <img
+            className={styles.lineIcon}
+            alt="Linha divisória decorativa"
+            src="/line-1.svg"
+          />
         </div>
         <div className={styles.copyright}>
           © Copyright Oficina da Barba 2024

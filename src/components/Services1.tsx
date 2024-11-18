@@ -14,7 +14,7 @@ const Services1: FunctionComponent<Services1Type> = ({ className = "" }) => {
           <img
             className={styles.iconScissors}
             loading="lazy"
-            alt=""
+            alt="Ícone de tesoura representando corte de cabelo"
             src="/icon-scissors1.svg"
           />
         </div>
@@ -22,12 +22,8 @@ const Services1: FunctionComponent<Services1Type> = ({ className = "" }) => {
           <div className={styles.serviceTitles}>CORTE DE CABELO</div>
         </div>
         <div className={styles.cardFooter}>
-          <p
-            className={styles.duisPortaLigula}
-          >{`Duis porta, ligula rhoncuseuism `}</p>
-          <p
-            className={styles.duisPortaLigula}
-          >{`od pretium, nisi tellus eleifend `}</p>
+          <p className={styles.duisPortaLigula}>{`Duis porta, ligula rhoncuseuism `}</p>
+          <p className={styles.duisPortaLigula}>{`od pretium, nisi tellus eleifend `}</p>
           <p className={styles.duisPortaLigula}>odio, luctus viverra sem.</p>
         </div>
       </div>
@@ -36,7 +32,7 @@ const Services1: FunctionComponent<Services1Type> = ({ className = "" }) => {
           <img
             className={styles.iconRazor}
             loading="lazy"
-            alt=""
+            alt="Ícone de navalha representando aparagem de barba"
             src="/icon-razor1.svg"
           />
         </div>
@@ -44,12 +40,8 @@ const Services1: FunctionComponent<Services1Type> = ({ className = "" }) => {
           <div className={styles.text1}>APARAGEM DE BARBA</div>
         </div>
         <div className={styles.text2}>
-          <p
-            className={styles.duisPortaLigula}
-          >{`Duis porta, ligula rhoncuseuism `}</p>
-          <p
-            className={styles.duisPortaLigula}
-          >{`od pretium, nisi tellus eleifend `}</p>
+          <p className={styles.duisPortaLigula}>{`Duis porta, ligula rhoncuseuism `}</p>
+          <p className={styles.duisPortaLigula}>{`od pretium, nisi tellus eleifend `}</p>
           <p className={styles.duisPortaLigula}>odio, luctus viverra sem.</p>
         </div>
       </div>
@@ -65,17 +57,13 @@ const Services1: FunctionComponent<Services1Type> = ({ className = "" }) => {
         <img
           className={styles.iconMustache}
           loading="lazy"
-          alt=""
+          alt="Ícone de bigode representando estilização de barba"
           src="/icon-mustache.svg"
         />
         <div className={styles.text11}>ESTILIZAÇÃO DE BARBA</div>
         <div className={styles.text21}>
-          <p
-            className={styles.duisPortaLigula}
-          >{`Duis porta, ligula rhoncuseuism `}</p>
-          <p
-            className={styles.duisPortaLigula}
-          >{`od pretium, nisi tellus eleifend `}</p>
+          <p className={styles.duisPortaLigula}>{`Duis porta, ligula rhoncuseuism `}</p>
+          <p className={styles.duisPortaLigula}>{`od pretium, nisi tellus eleifend `}</p>
           <p className={styles.duisPortaLigula}>odio, luctus viverra sem.</p>
         </div>
       </div>

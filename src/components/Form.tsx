@@ -16,9 +16,7 @@ const Form: FunctionComponent<FormType> = ({ className = "" }) => {
               <div className={styles.subjectPlaceholder}>Barbearia</div>
             </div>
             <div className={styles.subjectDescription}>
-              <p
-                className={styles.ruaJacintoFavoreto}
-              >{`Rua Jacinto Favoreto, 301, `}</p>
+              <p className={styles.ruaJacintoFavoreto}>{`Rua Jacinto Favoreto, 301, `}</p>
               <p className={styles.ruaJacintoFavoreto}>São Carlos - Brasil</p>
             </div>
           </div>

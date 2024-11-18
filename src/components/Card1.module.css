@@ -29,6 +29,12 @@
   padding: 0 var(--padding-8xl);
   font-size: var(--font-size-3xl);
 }
+
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .card1 {
+  color: #000000;             /* Texto branco */
+}
+
 .card1 {
   width: 236px;
   flex-direction: column;

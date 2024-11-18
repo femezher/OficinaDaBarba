@@ -13,11 +13,12 @@ const Barbers: FunctionComponent<BarbersType> = ({ className = "" }) => {
         <h1 className={styles.barbersDescription}>NOSSOS BARBEIROS</h1>
       </div>
       <div className={styles.cards}>
+        {/* Card 1: Marlon McDonald */}
         <div className={styles.card1}>
           <img
             className={styles.imgIcon}
             loading="lazy"
-            alt=""
+            alt="Foto de Marlon McDonald, barbeiro da Oficina da Barba"
             src="/img@2x.png"
           />
           <div className={styles.text1}>
@@ -25,16 +26,18 @@ const Barbers: FunctionComponent<BarbersType> = ({ className = "" }) => {
             <img
               className={styles.socialsIcon}
               loading="lazy"
-              alt=""
+              alt="Ícones de redes sociais de Marlon McDonald"
               src="/socials.svg"
             />
           </div>
         </div>
+
+        {/* Card 2: Jerry Banks */}
         <div className={styles.card2}>
           <img
             className={styles.imgIcon}
             loading="lazy"
-            alt=""
+            alt="Foto de Jerry Banks, barbeiro da Oficina da Barba"
             src="/img-12@2x.png"
           />
           <div className={styles.text1}>
@@ -42,16 +45,18 @@ const Barbers: FunctionComponent<BarbersType> = ({ className = "" }) => {
             <img
               className={styles.socialsIcon}
               loading="lazy"
-              alt=""
+              alt="Ícones de redes sociais de Jerry Banks"
               src="/socials.svg"
             />
           </div>
         </div>
+
+        {/* Card 3: John Bailey */}
         <div className={styles.card2}>
           <img
             className={styles.imgIcon}
             loading="lazy"
-            alt=""
+            alt="Foto de John Bailey, barbeiro da Oficina da Barba"
             src="/img-22@2x.png"
           />
           <div className={styles.text1}>
@@ -59,7 +64,7 @@ const Barbers: FunctionComponent<BarbersType> = ({ className = "" }) => {
             <img
               className={styles.socialsIcon2}
               loading="lazy"
-              alt=""
+              alt="Ícones de redes sociais de John Bailey"
               src="/socials-2.svg"
             />
           </div>

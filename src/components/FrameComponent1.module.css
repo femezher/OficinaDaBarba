@@ -64,6 +64,26 @@
   color: var(--color-black);
   font-family: var(--font-inter);
 }
+
+
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .sobreNs {
+  color: #ffffff;             /* Texto branco */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .contateNos {
+  color: #ffffff;             /* Texto branco */
+  background-color: #000000; /* Fundo preto */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .galeria {
+  color: #ffffff;             /* Texto branco */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .servios {
+  color: #ffffff;             /* Texto branco */
+}
+
 .testimonialsParent {
   align-items: flex-start;
   justify-content: flex-start;

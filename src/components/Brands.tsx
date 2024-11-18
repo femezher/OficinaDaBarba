@@ -73,27 +73,67 @@ const Brands: FunctionComponent<BrandsType> = ({
       <div className={styles.text} style={textStyle}>
         <h2 className={styles.brandTitle}>MARCAS PARCEIRAS</h2>
         <div className={styles.brandSubtitle} style={brandSubtitleStyle}>
-          <p
-            className={styles.vestibulumCommodoSapien}
-          >{`Vestibulum commodo sapien non elit `}</p>
-          <p
-            className={styles.vestibulumCommodoSapien}
-          >{`porttitor, vitae volutpat nibh mollis. Nulla `}</p>
-          <p
-            className={styles.vestibulumCommodoSapien}
-          >{`porta risus id neque. `}</p>
+          <p className={styles.vestibulumCommodoSapien}>
+            Vestibulum commodo sapien non elit
+          </p>
+          <p className={styles.vestibulumCommodoSapien}>
+            porttitor, vitae volutpat nibh mollis. Nulla
+          </p>
+          <p className={styles.vestibulumCommodoSapien}>porta risus id neque.</p>
         </div>
       </div>
       <div className={styles.divider}>
-        <img className={styles.lineIcon} alt="" src={line} />
+        {/* Alt Text Adicionado */}
+        <img
+          className={styles.lineIcon}
+          loading="lazy"
+          alt="Linha divisória decorativa entre seções"
+          src={line}
+        />
       </div>
       <div className={styles.logos} style={logosStyle}>
-        <img className={styles.img1Icon} loading="lazy" alt="" src={img1} />
-        <img className={styles.img2Icon} loading="lazy" alt="" src={img2} />
-        <img className={styles.img1Icon} loading="lazy" alt="" src={img3} />
-        <img className={styles.img1Icon} loading="lazy" alt="" src={img11} />
-        <img className={styles.img1Icon} loading="lazy" alt="" src={img21} />
-        <img className={styles.img1Icon} loading="lazy" alt="" src={img31} />
+        {/* Logo 1 */}
+        <img
+          className={styles.img1Icon}
+          loading="lazy"
+          alt="Logo da Marca Parceira 1"
+          src={img1}
+        />
+        {/* Logo 2 */}
+        <img
+          className={styles.img2Icon}
+          loading="lazy"
+          alt="Logo da Marca Parceira 2"
+          src={img2}
+        />
+        {/* Logo 3 */}
+        <img
+          className={styles.img1Icon}
+          loading="lazy"
+          alt="Logo da Marca Parceira 3"
+          src={img3}
+        />
+        {/* Logo 4 */}
+        <img
+          className={styles.img1Icon}
+          loading="lazy"
+          alt="Logo da Marca Parceira 4"
+          src={img11}
+        />
+        {/* Logo 5 */}
+        <img
+          className={styles.img1Icon}
+          loading="lazy"
+          alt="Logo da Marca Parceira 5"
+          src={img21}
+        />
+        {/* Logo 6 */}
+        <img
+          className={styles.img1Icon}
+          loading="lazy"
+          alt="Logo da Marca Parceira 6"
+          src={img31}
+        />
       </div>
     </section>
   );

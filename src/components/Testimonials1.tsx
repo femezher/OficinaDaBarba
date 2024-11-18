@@ -21,27 +21,46 @@ const Testimonials1: FunctionComponent<Testimonials1Type> = ({
         <div
           className={styles.testimonialBackground}
           onClick={onTestimonialBackgroundClick}
+          aria-label="Imagem de fundo clicável que redireciona para a galeria"
+          role="button"
+          tabIndex={0}
+          onKeyPress={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              onTestimonialBackgroundClick();
+            }
+          }}
         />
         <div className={styles.cards}>
           <div className={styles.card1}>
             <img
               className={styles.imgIcon}
               loading="lazy"
-              alt=""
-              src="/img@2x.png"
+              alt="Foto do cliente Augusto, São Carlos"
+              src="/img1@2x.png"
             />
           </div>
           <img
             className={styles.cardBackgroundIcon}
             loading="lazy"
-            alt=""
+            alt="Imagem de fundo do card"
             src="/rectangle-12@2x.png"
           />
           <input className={styles.testimonialCard} type="text" />
           <input className={styles.testimonialCard1} type="text" />
           <input className={styles.testimonialCard2} type="text" />
         </div>
-        <div className={styles.text} onClick={onTestimonialBackgroundClick}>
+        <div
+          className={styles.text}
+          onClick={onTestimonialBackgroundClick}
+          role="button"
+          tabIndex={0}
+          aria-label="Adicionar Imagem e redirecionar para a galeria"
+          onKeyPress={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              onTestimonialBackgroundClick();
+            }
+          }}
+        >
           Adicionar Imagem
         </div>
         <div className={styles.text1}>Fazer Upload</div>

@@ -41,6 +41,12 @@ body {
 --color-gainsboro-300: rgba(230, 230, 230, 0.09);
 --color-darkgray: #979797;
 
+  /* High Contrast Colors */
+  --hc-background: #fff; /* Fundo branco no modo alto contraste */
+  --hc-text: #000;       /* Texto preto no modo alto contraste */
+  --hc-border: #000;     /* Bordas pretas, se necessário */
+  --hc-primary: #000;    /* Elementos primários em preto */
+
   /* Gaps */
   --gap-16xl: 35px;
   --gap-mid: 17px;
@@ -162,3 +168,16 @@ body {
   /* Border radiuses */
   --br-xl: 20px;
 }
+
+
+.highContrast {
+  --color-white: var(--hc-background); /* Define var(--color-white) como fundo branco */
+  --color-black: var(--hc-text);       /* Define var(--color-black) como texto preto */
+  --color-gray-100: var(--hc-background);
+  --color-darkgray: var(--hc-text);
+  --color-gainsboro-100: var(--hc-text);
+  --color-gainsboro-200: var(--hc-text);
+  --color-gainsboro-300: var(--hc-text);
+  --default-white: var(--hc-text);
+}
+

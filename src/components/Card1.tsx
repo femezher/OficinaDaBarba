@@ -54,7 +54,7 @@ const Card1: FunctionComponent<Card1Type> = ({
         <img
           className={styles.iconRazor}
           loading="lazy"
-          alt=""
+          alt="Ícone de navalha"
           src={iconRazor}
           style={iconRazorStyle}
         />

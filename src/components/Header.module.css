@@ -65,15 +65,7 @@
   justify-content: flex-start;
   padding: var(--padding-8xs) 0 var(--padding-5xs) var(--padding-9xs);
 }
-.rodap {
-  text-decoration: none;
-  height: 17px;
-  position: relative;
-  font-weight: 700;
-  color: inherit;
-  display: inline-block;
-  min-width: 95.2px;
-}
+
 .frameInner {
   height: 30px;
   width: 107px;
@@ -82,18 +74,7 @@
   box-sizing: border-box;
   display: none;
 }
-.rodapParent {
-  margin: 0 !important;
-  position: absolute;
-  right: 102px;
-  bottom: -18px;
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-8xs) var(--padding-10xs) var(--padding-5xs)
-    var(--padding-5xs);
-}
+
 .rectangleDiv {
   height: 30px;
   width: 80px;
@@ -229,6 +210,26 @@
   border-radius: 50%;
   object-fit: cover;
 }
+
+
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .sobreNs {
+  color: #ffffff;             /* Texto branco */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .contateNos {
+  color: #ffffff;             /* Texto branco */
+  background-color: #000000; /* Fundo preto */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .galeria {
+  color: #ffffff;             /* Texto branco */
+}
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .servios {
+  color: #ffffff;             /* Texto branco */
+}
+
 .header {
   align-self: stretch;
   display: flex;

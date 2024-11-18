@@ -65,6 +65,12 @@
   gap: 30px 26px;
   min-height: 246px;
 }
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .brands {
+  color: #000000;             /* Texto branco */
+}
+
+
 .brands {
   align-self: stretch;
   background-color: var(--color-gray-100);

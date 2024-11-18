@@ -26,6 +26,14 @@
   font-size: var(--font-size-3xl);
   text-align: center;
 }
+
+/* Estilos para o modo de alto contraste usando :global */
+:global(.highContrast) .card3 {
+  color: #000000;             /* Texto branco */
+}
+
+
+
 .card3 {
   width: 278px;
   display: flex;

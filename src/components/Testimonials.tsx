@@ -21,13 +21,14 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
         <div
           className={styles.testimonialsBackground}
           onClick={onTestimonialsBackgroundClick}
+          aria-label="Imagem de fundo clicável que redireciona para a galeria"
         />
         <div className={styles.cards}>
           <div className={styles.card1}>
             <img
               className={styles.imgIcon}
               loading="lazy"
-              alt=""
+              alt="Foto do cliente Augusto, São Carlos"
               src="/img1@2x.png"
             />
           </div>
@@ -35,7 +36,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
             <img
               className={styles.imgIcon}
               loading="lazy"
-              alt=""
+              alt="Foto do cliente Fernando, São Paulo"
               src="/img1@2x.png"
             />
           </div>
@@ -43,7 +44,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
             <img
               className={styles.imgIcon}
               loading="lazy"
-              alt=""
+              alt="Foto do cliente Felipe, São Carlos"
               src="/img1@2x.png"
             />
           </div>
@@ -51,7 +52,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
             <img
               className={styles.imgIcon}
               loading="lazy"
-              alt=""
+              alt="Foto do cliente Lucas, Campinas"
               src="/img1@2x.png"
             />
           </div>
@@ -59,7 +60,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
             <img
               className={styles.imgIcon}
               loading="lazy"
-              alt=""
+              alt="Foto do cliente Rafael, Rio de Janeiro"
               src="/img-4@2x.png"
             />
           </div>
@@ -67,17 +68,25 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
             <img
               className={styles.imgIcon}
               loading="lazy"
-              alt=""
+              alt="Foto do cliente Bruno, Belo Horizonte"
               src="/img-5@2x.png"
             />
           </div>
         </div>
-        <h1 className={styles.testimonialAuthor}>GALERIA</h1>
+        
       </div>
-      <div className={styles.testimonialQuote}>Nossa</div>
+      
       <div
         className={styles.testimonialsHeading}
         onClick={onTestimonialsBackgroundClick}
+        role="button"
+        tabIndex={0}
+        aria-label="Adicionar Imagem e redirecionar para a galeria"
+        onKeyPress={(e) => {
+          if (e.key === 'Enter' || e.key === ' ') {
+            onTestimonialsBackgroundClick();
+          }
+        }}
       >
         Adicionar Imagem
       </div>

@@ -1,59 +1,44 @@
-import { FunctionComponent, useCallback, useState, useEffect } from "react";
+import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Hero from "../components/Hero";
 import Testimonials1 from "../components/Testimonials1";
 import Card4 from "../components/Card4";
 import Card5 from "../components/Card5";
 import Card6 from "../components/Card6";
+import AccessibilityButton from '../components/AccessibilityButton'; // Importação do AccessibilityButton
 import styles from "./Galeria1.module.css";
 
 const Galeria1: FunctionComponent = () => {
   const navigate = useNavigate();
 
-  // Estado para controlar o tamanho da fonte
-  const [fontSize, setFontSize] = useState(16); // Tamanho de fonte padrão em pixels
+  // Funções de navegação
+  const onIncioTextClick = useCallback(() => {
+    navigate("/");
+  }, [navigate]);
 
-  // Efeito para ajustar o tamanho da fonte no elemento raiz
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${fontSize}px`;
-  }, [fontSize]);
+  const onServiosTextClick = useCallback(() => {
+    navigate("/services");
+  }, [navigate]);
 
-  // Função para aumentar o tamanho da fonte
-  const onIncreaseFontSize = useCallback(() => {
-    setFontSize((prevSize) => {
-      const newSize = Math.min(prevSize + 2, 24);
-      console.log(`Aumentando tamanho da fonte: ${newSize}px`);
-      return newSize;
-    });
-  }, []);
+  const onSobreNsTextClick = useCallback(() => {
+    navigate("/about-us");
+  }, [navigate]);
 
-  // Função para diminuir o tamanho da fonte
-  const onDecreaseFontSize = useCallback(() => {
-    setFontSize((prevSize) => {
-      const newSize = Math.max(prevSize - 2, 12);
-      console.log(`Diminuindo tamanho da fonte: ${newSize}px`);
-      return newSize;
-    });
-  }, []);
+  const onContateNosTextClick = useCallback(() => {
+    navigate("/contact-us");
+  }, [navigate]);
 
   return (
     <div className={styles.galeria}>
-      {/* Botões "A+" e "A-" */}
-      <div className={styles.fontSizeControls}>
-        <button onClick={onIncreaseFontSize} className={styles.fontSizeButton}>
-          A+
-        </button>
-        <button onClick={onDecreaseFontSize} className={styles.fontSizeButton}>
-          A-
-        </button>
-      </div>
+      {/* Implementação do componente AccessibilityButton */}
+      <AccessibilityButton />
 
       <Hero
-        heroBackgroundImage="url('/hero1@3x.png')"
-        menuGap="1.625rem" /* 26px / 16 */
-        heroCaption="ADICIONAR IMAGEM"
-        heroCaptionLeft="unset"
-        heroCaptionRight="20.3125rem" /* 325px / 16 */
+        onIncioTextClick={onIncioTextClick}
+        onServiosTextClick={onServiosTextClick}
+        onSobreNsTextClick={onSobreNsTextClick}
+        onContateNosTextClick={onContateNosTextClick}
+        heroCaption="GALERIA"
       />
       <Testimonials1 />
       <section className={styles.footer}>
@@ -74,6 +59,7 @@ const Galeria1: FunctionComponent = () => {
             <Card5
               card2Gap="0.96875rem" /* 15.5px / 16 */
               iconEnvelope="/icon-envelope.svg"
+              altIconEnvelope="Ícone de envelope representando contato por email"
               iconEnvelopeHeight="1.25rem" /* 20px / 16 */
               text1="EMAIL"
               text2="oficinadabarba@email.com"
@@ -86,6 +72,7 @@ const Galeria1: FunctionComponent = () => {
             <Card5
               card2Gap="0.65625rem" /* 10.5px / 16 */
               iconEnvelope="/icon-phone.svg"
+              altIconEnvelope="Ícone de telefone representando contato telefônico"
               iconEnvelopeHeight="1.625rem" /* 26px / 16 */
               text1="TELEFONE"
               text2="(+55) (16) 99332-9723"
@@ -109,7 +96,7 @@ const Galeria1: FunctionComponent = () => {
           <img
             className={styles.lineIcon}
             loading="lazy"
-            alt=""
+            alt="" // Imagem decorativa, mantém alt vazio
             src="/line-1.svg"
           />
         </div>

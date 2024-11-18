@@ -62,7 +62,7 @@ const Card5: FunctionComponent<Card5Type> = ({
       <img
         className={styles.iconEnvelope}
         loading="lazy"
-        alt=""
+        alt="Ícone representando contato por email"
         src={iconEnvelope}
         style={iconEnvelopeStyle}
       />

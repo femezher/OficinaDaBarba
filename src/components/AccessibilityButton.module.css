@@ -1,0 +1,137 @@
+/* AccessibilityButton.module.css */
+
+/* Contêiner do Ícone e Painel */
+.iconAndPanel {
+  position: fixed;
+  top: 50%;
+  left: 20px;
+  transform: translateY(-50%);
+  z-index: 1000;
+}
+
+/* Ícone de Acessibilidade */
+.accessibilityIcon {
+  width: 50px;
+  height: 50px;
+  background-color: #007BFF;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Painel Lateral */
+.sidePanel {
+  position: absolute;
+  top: 0;
+  left: calc(100% + 15px);
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 1001;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  width: 400px;
+  font-family: 'Inter', sans-serif;
+}
+
+/* Cabeçalho do Painel */
+.panelHeader {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.panelHeaderIcon {
+  font-size: 1.5rem;
+  margin-right: 10px;
+  color: #007BFF;
+}
+
+.panelTitle {
+  font-size: 1.25rem;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Opções de Acessibilidade */
+.accessibilityOptions {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Cada Opção de Acessibilidade */
+.accessibilityOption {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.optionIcon {
+  font-size: 1.25rem;
+  margin-right: 10px;
+  color: #007BFF;
+  width: 30px;
+  text-align: center;
+}
+
+.optionText {
+  font-size: 1rem;
+  color: #333;
+  flex-grow: 1;
+}
+
+.optionToggle {
+  margin-left: auto;
+}
+
+/* Estilos para botões de aumento/diminuição */
+.fontSizeButtons {
+  display: flex;
+  gap: 5px;
+}
+
+.fontSizeButton {
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 6px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.fontSizeButton:hover {
+  background-color: #0056b3;
+}
+
+/* Efeito Hover nas Opções */
+.accessibilityOption:hover .optionText {
+  text-decoration: underline;
+}
+
+/* Responsividade para telas menores */
+@media screen and (max-width: 600px) {
+  .sidePanel {
+    left: calc(100% + 10px);
+    padding: 15px;
+    width: 200px;
+  }
+
+  .panelTitle {
+    font-size: 1.1rem;
+  }
+
+  .optionText {
+    font-size: 0.95rem;
+  }
+
+  .optionIcon {
+    font-size: 1.1rem;
+    width: 25px;
+  }
+}

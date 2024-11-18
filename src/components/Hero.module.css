@@ -8,27 +8,7 @@
   left: 0;
   background-color: var(--color-black);
 }
-.irPara,
-.topo {
-  text-decoration: none;
-  position: absolute;
-  color: inherit;
-  display: inline-block;
-}
-.irPara {
-  height: 17px;
-  margin: 0 !important;
-  right: 582px;
-  bottom: -10px;
-  min-width: 74px;
-  white-space: nowrap;
-}
-.topo {
-  top: 5px;
-  left: 10px;
-  font-weight: 700;
-  min-width: 59px;
-}
+
 .menuBackgrounds {
   position: absolute;
   top: 0;
@@ -38,14 +18,7 @@
   width: 100%;
   height: 100%;
 }
-.topoParent {
-  height: 30px;
-  width: 80px;
-  position: absolute;
-  margin: 0 !important;
-  right: 469px;
-  bottom: -18px;
-}
+
 .contedo {
   text-decoration: none;
   position: absolute;
@@ -57,43 +30,7 @@
   width: 121.9px;
   min-width: 121.9px;
 }
-.frameChild {
-  position: absolute;
-  top: 0;
-  left: 0;
-  border: 1.5px solid var(--color-white);
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-}
-.contedoParent {
-  height: 30px;
-  width: 126px;
-  position: absolute;
-  margin: 0 !important;
-  right: 225px;
-  bottom: -18px;
-}
-.rodap {
-  text-decoration: none;
-  position: absolute;
-  top: 5px;
-  left: 8px;
-  font-weight: 700;
-  color: inherit;
-  display: inline-block;
-  width: 95.2px;
-  min-width: 95.2px;
-}
-.rodapParent {
-  height: 30px;
-  width: 107px;
-  position: absolute;
-  margin: 0 !important;
-  right: 102px;
-  bottom: -18px;
-}
+
 .menu1 {
   text-decoration: none;
   position: absolute;

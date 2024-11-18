@@ -53,7 +53,7 @@ const Card6: FunctionComponent<Card6Type> = ({
       <img
         className={styles.iconClock}
         loading="lazy"
-        alt=""
+        alt="Ícone de relógio representando horário de funcionamento"
         src="/icon-clock.svg"
       />
       <div className={styles.text1Wrapper} style={frameDiv2Style}>
