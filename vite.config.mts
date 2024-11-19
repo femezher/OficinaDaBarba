@@ -7,5 +7,4 @@ export default defineConfig({
     outDir: "build",
   },
   plugins: [react()],
-  base: "/OficinaDaBarba/", // Subdiretório do GitHub Pages
 });
