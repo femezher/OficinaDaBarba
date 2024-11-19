@@ -1,7 +1,7 @@
 
   # Oficina da Barba
 
-Para acesso pelo Git Pages: https://femezher.github.io/oficina_da_barba
+Para acesso pelo Git Pages: https://github.com/femezher/OficinaDaBarba
 
   To preview and run the project on your device:
   1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
