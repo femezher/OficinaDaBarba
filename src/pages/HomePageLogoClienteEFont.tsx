@@ -156,7 +156,7 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
               onClick={onTextContainerClick}
               style={{ cursor: "pointer" }}
             >
-              <div className={styles.testimonialSubtitle}>
+              <div className={styles.testimonialSubtitle}style={{ marginLeft: '50px' }}>
                 VEJA UM POUCO DOS NOSSOS TRABALHOS
               </div>
               <div className={styles.testimonialDescriptionWrapper}>

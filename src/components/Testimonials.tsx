@@ -37,7 +37,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
               className={styles.imgIcon}
               loading="lazy"
               alt="Foto do cliente Fernando, São Paulo"
-              src="/img1@2x.png"
+              src="/img2@2x.png"
             />
           </div>
           <div className={styles.card1}>
@@ -45,7 +45,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
               className={styles.imgIcon}
               loading="lazy"
               alt="Foto do cliente Felipe, São Carlos"
-              src="/img1@2x.png"
+              src="/img3@2x.png"
             />
           </div>
           <div className={styles.card1}>
@@ -53,7 +53,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
               className={styles.imgIcon}
               loading="lazy"
               alt="Foto do cliente Lucas, Campinas"
-              src="/img1@2x.png"
+              src="/img4@2x.png"
             />
           </div>
           <div className={styles.card2}>
@@ -61,7 +61,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
               className={styles.imgIcon}
               loading="lazy"
               alt="Foto do cliente Rafael, Rio de Janeiro"
-              src="/img-4@2x.png"
+              src="/img-5@2x.png"
             />
           </div>
           <div className={styles.card2}>
@@ -69,7 +69,7 @@ const Testimonials: FunctionComponent<TestimonialsType> = ({
               className={styles.imgIcon}
               loading="lazy"
               alt="Foto do cliente Bruno, Belo Horizonte"
-              src="/img-5@2x.png"
+              src="/img-6@2x.png"
             />
           </div>
         </div>

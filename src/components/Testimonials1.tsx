@@ -36,7 +36,7 @@ const Testimonials1: FunctionComponent<Testimonials1Type> = ({
               className={styles.imgIcon}
               loading="lazy"
               alt="Foto do cliente Augusto, São Carlos"
-              src="/img1@2x.png"
+              src="/img8@2x.png"
             />
           </div>
           <img
