@@ -16,6 +16,14 @@ export type HeroType = {
   menuGap?: CSSProperties["gap"];
   heroCaptionLeft?: CSSProperties["left"];
   heroCaptionRight?: CSSProperties["right"];
+
+
+/** Propriedades de navegação */
+onIncioTextClick?: () => void;
+onServiosTextClick?: () => void;
+onSobreNsTextClick?: () => void;
+onContateNosTextClick?: () => void;
+onGaleriaTextClick?: () => void;
 };
 
 const Hero: FunctionComponent<HeroType> = ({
@@ -25,6 +33,11 @@ const Hero: FunctionComponent<HeroType> = ({
   heroCaption,
   heroCaptionLeft,
   heroCaptionRight,
+  onIncioTextClick,
+  onServiosTextClick,
+  onSobreNsTextClick,
+  onContateNosTextClick,
+  onGaleriaTextClick,
 }) => {
   const heroStyle: CSSProperties = useMemo(() => {
     return {

@@ -4,6 +4,7 @@ import styles from "./Card2.module.css";
 export type Card2Type = {
   className?: string;
   iconBarbershop?: string;
+  altIcon?: string;
 
   /** Style props */
   barbershopLabelAlignSelf?: CSSProperties["alignSelf"];
@@ -17,6 +18,7 @@ export type Card2Type = {
 const Card2: FunctionComponent<Card2Type> = ({
   className = "",
   iconBarbershop,
+  altIcon,
   barbershopLabelAlignSelf,
   barbershopLabelTextAlign,
   card3Width,

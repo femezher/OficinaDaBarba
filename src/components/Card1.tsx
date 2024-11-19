@@ -6,6 +6,7 @@ export type Card1Type = {
   iconRazor?: string;
   counterValues?: string;
   counterLabels?: string;
+  altIcon?: string;
 
   /** Style props */
   card1Width?: CSSProperties["width"];
@@ -16,12 +17,13 @@ export type Card1Type = {
 
 const Card1: FunctionComponent<Card1Type> = ({
   className = "",
-  card1Width,
   iconRazor,
-  iconRazorWidth,
+  altIcon,
   counterValues,
-  frameDivAlignSelf,
   counterLabels,
+  card1Width,
+  iconRazorWidth,
+  frameDivAlignSelf,
   counterValuesAlignSelf,
 }) => {
   const card1Style: CSSProperties = useMemo(() => {

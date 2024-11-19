@@ -4,6 +4,8 @@ import styles from "./Card5.module.css";
 export type Card5Type = {
   className?: string;
   iconEnvelope?: string;
+  altIconEnvelope?: string; // Adicionado
+  altIcon?: string;
   text1?: string;
   text2?: string;
 
@@ -21,6 +23,8 @@ const Card5: FunctionComponent<Card5Type> = ({
   className = "",
   card2Gap,
   iconEnvelope,
+  altIconEnvelope, // Adicionado
+  altIcon, // Adicionado
   iconEnvelopeHeight,
   text1,
   text2,
