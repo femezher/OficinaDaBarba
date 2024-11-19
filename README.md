@@ -1,7 +1,7 @@
 
   # Oficina da Barba
 
-  Note: Please ensure you have installed <code><a href="https://nodejs.org/en/download/">nodejs</a></code>
+Para acesso pelo Git Pages: https://femezher.github.io/oficina_da_barba
 
   To preview and run the project on your device:
   1) Open project folder in <a href="https://code.visualstudio.com/download">Visual Studio Code</a>
