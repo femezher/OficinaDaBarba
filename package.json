@@ -2,7 +2,7 @@
   "name": "oficina_da_barba",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://<seu-username>.github.io/oficina_da_barba",
+  "homepage": "https://femezher.github.io/oficina_da_barba",
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
@@ -26,14 +26,14 @@
     "eslint": "^8.57.0",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.6",
+    "gh-pages": "^5.0.0",
     "vite": "^5.2.3"
-    "gh-pages": "^5.0.0"
   },
   "scripts": {
     "start": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
