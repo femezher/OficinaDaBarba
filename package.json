@@ -2,7 +2,7 @@
   "name": "oficina_da_barba",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/femezher/OficinaDaBarba",
+  "homepage": "https://femezher.github.io/OficinaDaBarba"
   "dependencies": {
     "@fortawesome/free-solid-svg-icons": "^6.6.0",
     "@fortawesome/react-fontawesome": "^0.2.2",
