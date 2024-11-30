@@ -92,6 +92,7 @@
   bottom: -12px;
   font-size: var(--font-size-9xl);
   cursor: pointer;
+  
 }
 
 .text,
@@ -101,7 +102,7 @@
 .text4,
 .text5 {
   position: absolute;
-  margin: 0 !important;
+  
   letter-spacing: 0.05em;
   display: inline-block;
   white-space: nowrap;
@@ -124,13 +125,15 @@
 }
 
 .text2 {
-  top: 469px;
+  top: 450px;
+  
 }
 
 .text3,
 .text4,
 .text5 {
   bottom: 351px;
+  margin-bottom: 20px;
 }
 
 .text4,

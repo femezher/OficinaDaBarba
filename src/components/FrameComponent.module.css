@@ -149,14 +149,7 @@
   color: var(--color-darkgray);
   min-width: 99px;
 }
-.contateNos,
-.galeria,
-.servios,
-.sobreNs {
-  text-decoration: none;
-  display: inline-block;
-  cursor: pointer;
-}
+
 .sobreNs {
   position: absolute;
   margin: 0 !important;
@@ -172,6 +165,7 @@
   position: relative;
   color: inherit;
 }
+
 .galeria {
   min-width: 82px;
 }
@@ -189,16 +183,27 @@
   color: var(--color-darkgray);
 }
 .menu {
-  height: 13px;
-  flex: 1;
-  padding: var(--padding-10xs) var(--padding-35xl) 0;
-  box-sizing: border-box;
-  position: relative;
-  gap: var(--gap-288xl);
-  max-width: 100%;
-  
-  
-  
+  display: flex; /* Alinha os itens em uma linha */
+  justify-content: center; /* Centraliza os itens horizontalmente */
+  align-items: center; /* Centraliza os itens verticalmente */
+  gap: 3rem; /* Espaçamento maior entre os links */
+  background-color: #000; /* Fundo preto */
+  padding: 1rem 2rem; /* Espaçamento interno */
+}
+
+.menuItem {
+  color: var(--color-darkgray); /* Cor original */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 1.50rem; /* Tamanho maior da fonte (20px) */
+  font-weight: 700; /* Fonte negrito */
+  cursor: pointer; /* Cursor de ponteiro para links */
+  min-width: 80px; /* Largura mínima para manter a consistência visual */
+  text-align: center; /* Alinha o texto centralmente */
+  transition: color 0.3s ease; /* Suaviza a mudança de cor ao passar o mouse */
+}
+
+.menuItem:hover {
+  color: var(--color-white); /* Cor branca no hover */
 }
 .imageIcon,
 .oficinaDaBarba11 {
@@ -376,7 +381,29 @@
   font-family: var(--font-inter);
 }
 
+:global(.highContrast) .menu {
+  background-color: #000; /* Fundo preto */
+}
 
+:global(.highContrast) .menuItem {
+  color: #fff !important; /* Texto branco */
+}
+
+:global(.highContrast) .menuItem:hover {
+  color: #ff0; /* Cor amarela no hover, para dar contraste */
+}
+
+:global(.highContrast) .button {
+  background-color: #000; /* Fundo preto */
+  color: #fff; /* Texto branco */
+  border: 2px solid #fff; /* Bordas brancas */
+}
+
+:global(.highContrast) .button:hover {
+  background-color: #222; /* Fundo cinza escuro no hover */
+  color: #ff0; /* Texto amarelo no hover */
+  border-color: #ff0; /* Bordas amarelas no hover */
+}
 
 @media screen and (max-width: 1125px) {
   .menuParent {

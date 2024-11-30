@@ -107,13 +107,13 @@
 }
 
 .imgIcon {
-  width: 102.8125rem; /* 1645px / 16 */
+  width: 100%;           /* Permite que a imagem ocupe 100% da largura do contêiner */
+  max-width: 100%;       /* Garante que a imagem não exceda a largura do contêiner */
+  height: auto;          /* Mantém a proporção da imagem */
   position: relative;
-  max-height: 100%;
-  object-fit: cover;
+  object-fit: cover;     /* Mantém a imagem coberta sem distorção */
   mix-blend-mode: normal;
-  max-width: 115%;
-  flex-shrink: 0;
+  flex-shrink: 1;        /* Permite que a imagem encolha se necessário */
 }
 
 .button:hover,
@@ -126,10 +126,11 @@
   background-color: var(--color-black);
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center;        /* Centraliza verticalmente a imagem */
+  justify-content: center;    /* Centraliza horizontalmente a imagem */
   padding: 0;
   max-width: 100%;
+  overflow: hidden;           /* Evita que conteúdos excedentes apareçam */
 }
 
 .servicesSubtitle,
@@ -335,8 +336,8 @@
   left: 22.375rem; /* 358px / 16 */
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
+  align-items: center; 
+  justify-content: center;
   flex-wrap: wrap;
   align-content: flex-start;
   gap: 3.125rem 2.875rem; /* 50px, 46px */
@@ -385,8 +386,10 @@
 }
 
 .services {
-  height: 76.1875rem; /* 1219px / 16 */
+  height: auto; /* 1219px / 16 */
+  display: flex;
   flex-direction: column;
+  align-items: center;
   padding: 0;
   position: relative;
   gap: var(--gap-3xs);
@@ -652,6 +655,53 @@
   padding: var(--padding-21xl) 0 var(--padding-40xl);
   line-height: normal;
   letter-spacing: normal;
+  box-sizing: border-box;
+}
+/* Modo de alto contraste */
+.highContrast .card1 .iconRazor {
+  content: url("/icon-razor-high-contrast.svg");
+}
+
+.highContrast .card1 .iconScissors {
+  content: url("/icon-scissors-high-contrast.svg");
+}
+
+.highContrast .card2 .iconBarbershop {
+  content: url("/icon-barbershop-high-contrast.svg");
+}
+
+.highContrastWrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.highContrastWrapper .iconRazor {
+  content: url("/icon-razor-high-contrast.svg");
+}
+
+.highContrastWrapper .iconScissors {
+  content: url("/icon-scissors-high-contrast.svg");
+}
+
+.highContrastWrapper .iconBarbershop {
+  content: url("/icon-barbershop-high-contrast.svg");
+}
+
+.highContrast .iconRazor {
+  content: url("/icon-razor-high-contrast.svg");
+}
+
+.highContrast .iconScissors {
+  content: url("/icon-scissors-high-contrast.svg");
+}
+
+.highContrast .iconBarbershop {
+  content: url("/icon-barbershop-high-contrast.svg");
+}
+
+/* Garante que a classe seja aplicada no modo de alto contraste */
+.highContrast .highContrastWrapper {
+  background-color: var(--hc-background);
 }
 
 /* Media Queries */
@@ -712,7 +762,30 @@
     box-sizing: border-box;
   }
 }
+@media screen and (max-width: 1200px) {
+  .oficinaDaBarba11 {
+    max-width: 80%;
+  }
+}
 
+@media screen and (max-width: 768px) {
+  .oficinaDaBarba11 {
+    max-width: 90%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .cards {
+    flex-direction: column; /* Em telas menores, organize os cards em uma única coluna */
+    align-items: center;
+    gap: 2rem; /* Reduza o espaçamento */
+  }
+}
+@media screen and (max-width: 480px) {
+  .oficinaDaBarba11 {
+    max-width: 100%;
+  }
+}
 @media screen and (max-width: 28.125rem) { /* 450px / 16 */
   .servicesSubtitle {
     font-size: var(--font-size-11xl);
