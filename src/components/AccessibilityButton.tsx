@@ -1,3 +1,4 @@
+// AccessibilityButton.tsx
 import { FunctionComponent, useState, useEffect, useRef } from 'react';
 import styles from './AccessibilityButton.module.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -20,6 +21,11 @@ const AccessibilityButton: FunctionComponent = () => {
   const [fontSize, setFontSize] = useState(16); // Tamanho de fonte padrão em pixels
   const [highContrast, setHighContrast] = useState(false);
 
+  // Definir limites para o tamanho da fonte
+  const MIN_FONT_SIZE = 12;
+  const MAX_FONT_SIZE = 20;
+  const STEP_SIZE = 2;
+
   useEffect(() => {
     document.documentElement.style.fontSize = `${fontSize}px`;
   }, [fontSize]);
@@ -34,7 +40,7 @@ const AccessibilityButton: FunctionComponent = () => {
 
   const onIncreaseFontSize = () => {
     setFontSize((prevSize) => {
-      const newSize = Math.min(prevSize + 2, 24);
+      const newSize = Math.min(prevSize + STEP_SIZE, MAX_FONT_SIZE);
       console.log(`Aumentando tamanho da fonte: ${newSize}px`);
       return newSize;
     });
@@ -42,7 +48,7 @@ const AccessibilityButton: FunctionComponent = () => {
 
   const onDecreaseFontSize = () => {
     setFontSize((prevSize) => {
-      const newSize = Math.max(prevSize - 2, 12);
+      const newSize = Math.max(prevSize - STEP_SIZE, MIN_FONT_SIZE);
       console.log(`Diminuindo tamanho da fonte: ${newSize}px`);
       return newSize;
     });
@@ -95,16 +101,37 @@ const AccessibilityButton: FunctionComponent = () => {
               <FontAwesomeIcon icon={faTextHeight} className={styles.optionIcon} />
               <span className={styles.optionText}>Tamanho da Fonte</span>
               <div className={styles.fontSizeButtons}>
-                <button onClick={onDecreaseFontSize} className={styles.fontSizeButton}>
+                <button
+                  onClick={onDecreaseFontSize}
+                  className={styles.fontSizeButton}
+                  disabled={fontSize <= MIN_FONT_SIZE}
+                  aria-label="Diminuir tamanho da fonte"
+                >
                   A-
                 </button>
-                <button onClick={onIncreaseFontSize} className={styles.fontSizeButton}>
+                <button
+                  onClick={onIncreaseFontSize}
+                  className={styles.fontSizeButton}
+                  disabled={fontSize >= MAX_FONT_SIZE}
+                  aria-label="Aumentar tamanho da fonte"
+                >
                   A+
                 </button>
               </div>
             </div>
             {/* Alto Contraste */}
-            <div className={styles.accessibilityOption} onClick={toggleHighContrast}>
+            <div
+              className={styles.accessibilityOption}
+              onClick={toggleHighContrast}
+              role="button"
+              tabIndex={0}
+              aria-label="Alternar modo de alto contraste"
+              onKeyPress={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  toggleHighContrast();
+                }
+              }}
+            >
               <FontAwesomeIcon icon={faAdjust} className={styles.optionIcon} />
               <span className={styles.optionText}>Alto Contraste</span>
               <input
@@ -112,6 +139,7 @@ const AccessibilityButton: FunctionComponent = () => {
                 checked={highContrast}
                 readOnly
                 className={styles.optionToggle}
+                aria-label="Toggle Alto Contraste"
               />
             </div>
             {/* Aumentar Espaçamento de Texto */}

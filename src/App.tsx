@@ -6,7 +6,6 @@ import {
   useLocation,
 } from "react-router-dom";
 import HomePageLogoClienteEFont from "./pages/HomePageLogoClienteEFont";
-import HomePageLogoClienteEFont1 from "./pages/HomePageLogoClienteEFont1";
 import Galeria1 from "./pages/Galeria1";
 import Services from "./pages/Services";
 import AboutUs from "./pages/AboutUs";
@@ -30,10 +29,6 @@ function App() {
 
     switch (pathname) {
       case "/":
-        title = "";
-        metaDescription = "";
-        break;
-      case "/home-page-logo-cliente-e-fontes-maiores":
         title = "";
         metaDescription = "";
         break;
@@ -76,10 +71,6 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<HomePageLogoClienteEFont />} />
-      <Route
-        path="/home-page-logo-cliente-e-fontes-maiores"
-        element={<HomePageLogoClienteEFont1 />}
-      />
       <Route path="/galeria1" element={<Galeria1 />} />
       <Route path="/services" element={<Services />} />
       <Route path="/about-us" element={<AboutUs />} />

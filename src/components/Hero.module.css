@@ -1,3 +1,19 @@
+
+/* Regras para o modo de alto contraste */
+:global(.highContrast) .menu a {
+  color: #ffffff; /* Define o texto dos itens do menu como branco */
+}
+
+:global(.highContrast) .menu a:hover {
+  text-decoration: underline; /* Mantém o underline no hover */
+}
+
+:global(.highContrast) .heroBackground {
+  background-color: #000000; /* Assegura que o fundo permaneça preto no alto contraste */
+}
+
+
+
 .heroBackground {
   height: 109px;
   width: 100%;
@@ -19,6 +35,12 @@
   height: 100%;
 }
 
+.textoTaxado {
+  text-decoration: line-through;
+  color: var(--color-darkgray); /* Mantém a cor como está */
+  cursor: default; /* Remove o comportamento de ponteiro para clique */
+  text-decoration: line-through !important;
+}
 .contedo {
   text-decoration: none;
   position: absolute;

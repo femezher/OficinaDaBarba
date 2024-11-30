@@ -88,13 +88,13 @@ const Hero: FunctionComponent<HeroType> = ({
         <a className={styles.incio} onClick={onIncioTextClick1}>
           Início
         </a>
-        <a className={styles.servios} onClick={onServiosTextClick1}>
+        <a className={`${styles.servios} ${styles.textoTaxado}`}>
           Serviços
         </a>
-        <a className={styles.sobreNs} onClick={onSobreNsTextClick1}>
+        <a className={`${styles.sobreNs} ${styles.textoTaxado}`}>
           Sobre nós
         </a>
-        <a className={styles.contateNos} onClick={onContateNosTextClick1}>
+        <a className={`${styles.contateNos} ${styles.textoTaxado}`}>
           Contate-nos
         </a>
         <a className={styles.galeria} onClick={onGaleriaTextClick1}>

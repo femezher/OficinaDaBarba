@@ -97,14 +97,12 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
         <a className={styles.incio}>Início</a>
         <a
           className={styles.servios}
-          onClick={onServiosTextClick}
           style={{ textDecoration: 'line-through', cursor: 'default' }}
         >
           Serviços
         </a>
         <a
           className={styles.sobreNs}
-          onClick={onSobreNsTextClick}
           style={{ textDecoration: 'line-through', cursor: 'default' }}
         >
           Sobre nós
@@ -112,7 +110,6 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
         <div className={styles.contactGallery}>
           <a
             className={styles.contateNos}
-            onClick={onContateNosTextClick}
             style={{ textDecoration: 'line-through', cursor: 'default' }}
           >
             Contate-nos
