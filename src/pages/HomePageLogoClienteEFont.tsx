@@ -119,11 +119,12 @@ const HomePageLogoClienteEFont: FunctionComponent = () => {
                 </div>
               </div>
             </div>
-            <button className={styles.button} onClick={onButtonClick}>
+            <button className={styles.button}>
               <div className={styles.exploreMais}>EXPLORE MAIS</div>
             </button>
           </section>
           <section className={styles.counter}>
+            
             <Card1
               iconRazor="/icon-razor-1.svg"
               altIcon="Ícone de navalha representando barbas feitas"

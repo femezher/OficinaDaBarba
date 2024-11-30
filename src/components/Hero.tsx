@@ -1,7 +1,7 @@
 import {
   FunctionComponent,
   useMemo,
-  type CSSProperties,
+  CSSProperties,
   useCallback,
 } from "react";
 import { useNavigate } from "react-router-dom";
@@ -17,13 +17,12 @@ export type HeroType = {
   heroCaptionLeft?: CSSProperties["left"];
   heroCaptionRight?: CSSProperties["right"];
 
-
-/** Propriedades de navegação */
-onIncioTextClick?: () => void;
-onServiosTextClick?: () => void;
-onSobreNsTextClick?: () => void;
-onContateNosTextClick?: () => void;
-onGaleriaTextClick?: () => void;
+  /** Propriedades de navegação */
+  onIncioTextClick?: () => void;
+  onServiosTextClick?: () => void;
+  onSobreNsTextClick?: () => void;
+  onContateNosTextClick?: () => void;
+  onGaleriaTextClick?: () => void;
 };
 
 const Hero: FunctionComponent<HeroType> = ({
@@ -61,43 +60,47 @@ const Hero: FunctionComponent<HeroType> = ({
   const navigate = useNavigate();
 
   const onIncioTextClick1 = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
+    if (onIncioTextClick) onIncioTextClick();
+    else navigate("/");
+  }, [navigate, onIncioTextClick]);
 
   const onServiosTextClick1 = useCallback(() => {
-    navigate("/services");
-  }, [navigate]);
+    if (onServiosTextClick) onServiosTextClick();
+    else navigate("/services");
+  }, [navigate, onServiosTextClick]);
 
   const onSobreNsTextClick1 = useCallback(() => {
-    navigate("/about-us");
-  }, [navigate]);
+    if (onSobreNsTextClick) onSobreNsTextClick();
+    else navigate("/about-us");
+  }, [navigate, onSobreNsTextClick]);
 
   const onContateNosTextClick1 = useCallback(() => {
-    navigate("/contact-us");
-  }, [navigate]);
+    if (onContateNosTextClick) onContateNosTextClick();
+    else navigate("/contact-us");
+  }, [navigate, onContateNosTextClick]);
 
   const onGaleriaTextClick1 = useCallback(() => {
-    navigate("/galeria");
-  }, [navigate]);
+    if (onGaleriaTextClick) onGaleriaTextClick();
+    else navigate("/galeria");
+  }, [navigate, onGaleriaTextClick]);
 
   return (
     <header className={[styles.hero, className].join(" ")} style={heroStyle}>
       <div className={styles.heroBackground} />
       <div className={styles.menu} style={menuStyle}>
-        {/* Outros elementos do menu */}
-        <a className={styles.incio} onClick={onIncioTextClick1}>
+        <a className={styles.menuItem} onClick={onIncioTextClick1}>
           Início
         </a>
-        <a className={styles.servios} onClick={onServiosTextClick1}>
+        <a className={`${styles.menuItem} ${styles.textoTaxado}`}>
           Serviços
         </a>
-        <a className={styles.sobreNs} onClick={onSobreNsTextClick1}>
+        <a className={`${styles.menuItem} ${styles.textoTaxado}`}>
           Sobre nós
         </a>
-        <a className={styles.contateNos} onClick={onContateNosTextClick1}>
+        <a className={`${styles.menuItem} ${styles.textoTaxado}`}>
           Contate-nos
         </a>
-        <a className={styles.galeria} onClick={onGaleriaTextClick1}>
+        <a className={styles.menuItem} onClick={onGaleriaTextClick1}>
           Galeria
         </a>
       </div>

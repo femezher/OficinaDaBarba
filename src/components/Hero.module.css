@@ -1,3 +1,19 @@
+
+/* Regras para o modo de alto contraste */
+:global(.highContrast) .menu a {
+  color: #ffffff; /* Define o texto dos itens do menu como branco */
+}
+
+:global(.highContrast) .menu a:hover {
+  text-decoration: underline; /* Mantém o underline no hover */
+}
+
+:global(.highContrast) .heroBackground {
+  background-color: #000000; /* Assegura que o fundo permaneça preto no alto contraste */
+}
+
+
+
 .heroBackground {
   height: 109px;
   width: 100%;
@@ -19,6 +35,12 @@
   height: 100%;
 }
 
+.textoTaxado {
+  text-decoration: line-through;
+  color: var(--color-darkgray); /* Mantém a cor como está */
+  cursor: default; /* Remove o comportamento de ponteiro para clique */
+  text-decoration: line-through !important;
+}
 .contedo {
   text-decoration: none;
   position: absolute;
@@ -111,17 +133,44 @@
   cursor: pointer;
 }
 .menu {
-  height: 13px;
+
+  text-align: left; /* Alinha os itens do menu à esquerda */
   flex: 1;
   display: flex;
   flex-direction: row;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-10xs) var(--padding-406xl) 0;
-  box-sizing: border-box;
-  gap: var(--gap-11xl);
+  align-items: center; /* Centraliza verticalmente */
+  justify-content: flex-start; /* Alinha horizontalmente à esquerda */
+  padding: 1rem 2rem; /* Ajuste de espaçamento interno */
+  gap: 3rem; /* Espaçamento entre os itens do menu */
   max-width: 100%;
   z-index: 1;
+  background-color: #000; /* Fundo preto */
+}
+.menuLeft {
+  justify-content: flex-start; /* Alinha os itens do menu à esquerda */
+}
+
+.menuItem {
+  color: var(--color-darkgray); /* Cor original */
+  text-decoration: none; /* Remove sublinhado */
+  font-size: 1.5rem; /* Tamanho da fonte */
+  font-weight: 700; /* Fonte negrito */
+  cursor: pointer; /* Cursor de ponteiro para links */
+  min-width: 80px; /* Largura mínima */
+  text-align: center; /* Centraliza o texto */
+  transition: color 0.3s ease; /* Transição suave no hover */
+}
+.menuItem:hover {
+  color: #fff; /* Cor branca no hover */
+}
+
+/* Alto contraste */
+:global(.highContrast) .menuItem {
+  color: #fff !important;
+}
+
+:global(.highContrast) .menu {
+  background-color: #000; /* Fundo preto */
 }
 .heroCaption {
   margin: 0 !important;

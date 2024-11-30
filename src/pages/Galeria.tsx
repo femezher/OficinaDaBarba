@@ -1,5 +1,5 @@
-import { FunctionComponent, useCallback, useState, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
+// Galeria.tsx
+import { FunctionComponent } from "react";
 import Hero from "../components/Hero";
 import Testimonials from "../components/Testimonials";
 import Card4 from "../components/Card4";
@@ -9,64 +9,21 @@ import styles from "./Galeria.module.css";
 import AccessibilityButton from '../components/AccessibilityButton';
 
 const Galeria: FunctionComponent = () => {
-  const navigate = useNavigate();
-
-  // Estado para controlar o tamanho da fonte
-  const [fontSize, setFontSize] = useState(16); // Tamanho de fonte padrão em pixels
-
-  // Efeito para ajustar o tamanho da fonte no elemento raiz
-  useEffect(() => {
-    document.documentElement.style.fontSize = `${fontSize}px`;
-  }, [fontSize]);
-
-  // Função para aumentar o tamanho da fonte
-  const onIncreaseFontSize = useCallback(() => {
-    setFontSize((prevSize) => {
-      const newSize = Math.min(prevSize + 2, 24);
-      console.log(`Aumentando tamanho da fonte: ${newSize}px`);
-      return newSize;
-    });
-  }, []);
-
-  // Função para diminuir o tamanho da fonte
-  const onDecreaseFontSize = useCallback(() => {
-    setFontSize((prevSize) => {
-      const newSize = Math.max(prevSize - 2, 12);
-      console.log(`Diminuindo tamanho da fonte: ${newSize}px`);
-      return newSize;
-    });
-  }, []);
-
-  // Funções de navegação
-  const onIncioTextClick = useCallback(() => {
-    navigate("/");
-  }, [navigate]);
-
-  const onServiosTextClick = useCallback(() => {
-    navigate("/services");
-  }, [navigate]);
-
-  const onSobreNsTextClick = useCallback(() => {
-    navigate("/about-us");
-  }, [navigate]);
-
-  const onContateNosTextClick = useCallback(() => {
-    navigate("/contact-us");
-  }, [navigate]);
-
   return (
     <div className={styles.galeria}>
-      {/* Inclua o componente AccessibilityButton */}
+      {/* Inclua o AccessibilityButton */}
       <AccessibilityButton />
 
+      {/* Componente Hero sem o menu */}
       <Hero
-        onIncioTextClick={onIncioTextClick}
-        onServiosTextClick={onServiosTextClick}
-        onSobreNsTextClick={onSobreNsTextClick}
-        onContateNosTextClick={onContateNosTextClick}
         heroCaption="GALERIA"
+        // Remova ou ajuste outras props conforme necessário
       />
+
+      {/* Outros componentes da página */}
       <Testimonials />
+
+      {/* Rodapé */}
       <section className={styles.footer}>
         <div className={styles.text}>
           <div className={styles.text1}>
@@ -122,7 +79,7 @@ const Galeria: FunctionComponent = () => {
           <img
             className={styles.lineIcon}
             loading="lazy"
-            alt="" // Imagem decorativa, mantém alt vazio
+            alt="" /* Imagem decorativa, mantém alt vazio */
             src="/line-1.svg"
           />
         </div>

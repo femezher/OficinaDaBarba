@@ -94,30 +94,27 @@ const FrameComponent: FunctionComponent<FrameComponentType> = ({
   return (
     <section className={[styles.menuParent, className].join(" ")}>
       <div className={styles.menu}>
-        <a className={styles.incio}>Início</a>
+        <a className={styles.menuItem}>Início</a>
         <a
-          className={styles.servios}
-          onClick={onServiosTextClick}
+          className={styles.menuItem}
           style={{ textDecoration: 'line-through', cursor: 'default' }}
         >
           Serviços
         </a>
         <a
-          className={styles.sobreNs}
-          onClick={onSobreNsTextClick}
+          className={styles.menuItem}
           style={{ textDecoration: 'line-through', cursor: 'default' }}
         >
           Sobre nós
         </a>
         <div className={styles.contactGallery}>
           <a
-            className={styles.contateNos}
-            onClick={onContateNosTextClick}
+            className={styles.menuItem}
             style={{ textDecoration: 'line-through', cursor: 'default' }}
           >
             Contate-nos
           </a>
-          <a className={styles.galeria} onClick={onGaleriaTextClick}>
+          <a className={styles.menuItem} onClick={onGaleriaTextClick}>
             Galeria
           </a>
         </div>

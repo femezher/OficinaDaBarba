@@ -1,4 +1,5 @@
-/* Definição das variáveis em unidades relativas */
+/* Galeria1.module.css */
+
 :root {
   /* fonts */
   --font-inter: Inter;
@@ -64,7 +65,6 @@
   --padding-sm: 0.875rem;           /* 14px / 16 */
   --padding-xl: 1.25rem;            /* 20px / 16 */
   --padding-29xl: 3rem;             /* 48px / 16 */
-  --padding-17xl: 2.25rem;          /* 36px / 16 */
   --padding-128xl: 8rem;            /* 128px / 16 */
   --padding-9xl: 1.75rem;           /* 28px / 16 */
   --padding-base: 1rem;             /* 16px / 16 */
@@ -77,6 +77,87 @@
 
   /* Border radiuses */
   --br-xl: 1.25rem; /* 20px / 16 = 1.25rem */
+
+  /* High Contrast Colors */
+  --hc-background: #fff;
+  --hc-text: #000;
+  --hc-primary: #ff0;
+}
+
+/* Regras para o modo de alto contraste */
+
+
+/* Galeria1.module.css */
+
+/* Regras existentes ... */
+
+/* Regras para o modo de alto contraste */
+:global(.highContrast) .testimonialCard,
+:global(.highContrast) .testimonialCard1,
+:global(.highContrast) .testimonialCard2 {
+  background-color: #ffffff !important; /* Fundo branco */
+  color: #000000 !important;             /* Texto preto */
+  border: 2px solid #000000 !important; /* Borda preta */
+}
+
+/* Se houver outros inputs ou elementos de formulário, adicione-os aqui */
+
+:global(.highContrast) .footer {
+  background-color: #ffffff !important; /* Fundo branco */
+  color: #000000 !important;             /* Texto preto */
+}
+
+:global(.highContrast) .galeria {
+  background-color: #ffffff !important; /* Fundo branco */
+  color: #000000 !important;             /* Texto preto */
+}
+
+:global(.highContrast) .menu a {
+  color: #000000 !important; /* Texto dos itens do menu preto */
+}
+
+:global(.highContrast) .menu a:hover {
+  text-decoration: underline !important; /* Mantém o underline no hover */
+}
+
+/* Adicione regras adicionais para outros elementos que possuem background claro ou necessitam de ajustes */
+:global(.highContrast) .text11 {
+  color: #000000 !important; /* Texto preto */
+}
+
+:global(.highContrast) .sobreNs {
+  color: #000000 !important; /* Texto preto */
+}
+
+:global(.highContrast) .contateNos {
+  color: #000000 !important;             /* Texto preto */
+  background-color: #ffffff !important; /* Fundo branco */
+}
+
+:global(.highContrast) .servios {
+  color: #000000 !important; /* Texto preto */
+}
+
+:global(.highContrast) .lineIcon {
+  filter: brightness(0) invert(1); /* Inverte a cor da imagem para melhor contraste */
+}
+
+/* Estilos existentes, convertendo px para rem */
+
+.headerContainer {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2; /* Assegura que o menu fique acima de outros elementos */
+}
+
+.heroBackground {
+  width: 100%;
+  height: 6.8125rem; /* 109px / 16 */
+  background-color: var(--color-black);
+  position: relative;
 }
 
 /* Estilos existentes, convertendo px para rem */
@@ -148,6 +229,7 @@
 .footer,
 .galeria {
   background-color: var(--color-white);
+  color: var(--color-black);
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -208,7 +290,7 @@
 
 .testimonials {
   width: 100%;
-  /* height: 380px; */ /* Remover esta linha */
+
   min-height: 23.75rem; /* 380px / 16 */
   display: flex;
   flex-direction: column;
@@ -233,125 +315,6 @@
   align-items: flex-start;
   justify-content: flex-start;
   flex-shrink: 0;
-}
-
-.text13 {
-  margin: 0;
-  height: 2.25rem; /* 36px / 16 */
-  position: relative;
-  font-size: inherit;
-  letter-spacing: 0.05em;
-  font-weight: 700;
-  font-family: inherit;
-  display: inline-block;
-  flex-shrink: 0;
-}
-
-.cards1,
-.text5 {
-  display: flex;
-  padding: 0;
-}
-
-.text5 {
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  box-sizing: border-box;
-  max-width: 100%;
-}
-
-.cards1 {
-  align-self: stretch;
-  flex-direction: row;
-  align-items: flex-start;
-  justify-content: center;
-  gap: var(--gap-56xl);
-}
-
-.lineIcon,
-.text4 {
-  align-self: stretch;
-  max-width: 100%;
-}
-
-.text4 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  gap: var(--gap-61xl);
-}
-
-.lineIcon {
-  position: relative;
-  overflow: hidden;
-  max-height: 100%;
-}
-
-.divider {
-  align-self: stretch;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: flex-start;
-  padding: var(--padding-3xs) 0 var(--padding-5xs);
-}
-
-.copyright {
-  position: relative;
-  font-size: var(--font-size-mid);
-}
-
-.footer,
-.galeria {
-  background-color: var(--color-white);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  box-sizing: border-box;
-}
-
-.footer {
-  align-self: stretch;
-  align-items: center;
-  padding: var(--padding-41xl) var(--padding-53xl);
-  box-sizing: border-box;
-  gap: var(--gap-16xl);
-  flex-shrink: 0;
-  max-width: 100%;
-  text-align: left;
-  font-size: var(--font-size-31xl);
-  color: var(--color-black);
-  font-family: var(--font-inter);
-}
-
-
-/* Estilos para o modo de alto contraste usando :global */
-:global(.highContrast) .sobreNs {
-  color: #ffffff;             /* Texto branco */
-}
-/* Estilos para o modo de alto contraste usando :global */
-:global(.highContrast) .contateNos {
-  color: #ffffff;             /* Texto branco */
-  background-color: #000000; /* Fundo preto */
-}
-/* Estilos para o modo de alto contraste usando :global */
-:global(.highContrast) .galeria {
-  color: #ffffff;             /* Texto branco */
-}
-/* Estilos para o modo de alto contraste usando :global */
-:global(.highContrast) .servios {
-  color: #ffffff;             /* Texto branco */
-}
-
-.galeria {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  align-items: flex-start;
-  line-height: normal;
-  letter-spacing: normal;
 }
 
 /* Media Queries */

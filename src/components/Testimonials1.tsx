@@ -1,3 +1,4 @@
+// Testimonials1.tsx
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./Testimonials1.module.css";
@@ -40,7 +41,7 @@ const Testimonials1: FunctionComponent<Testimonials1Type> = ({
             />
           </div>
           <img
-            className={styles.cardBackgroundIcon}
+            className={styles.cardBackgroundIcon} // Classe existente
             loading="lazy"
             alt="Imagem de fundo do card"
             src="/rectangle-12@2x.png"

@@ -1,3 +1,4 @@
+// Galeria1.tsx
 import { FunctionComponent, useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import Hero from "../components/Hero";

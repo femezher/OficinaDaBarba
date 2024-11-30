@@ -1,3 +1,5 @@
+/* Testimonials1.module.css */
+
 .testimonialBackground {
   height: 78px;
   width: 343px;
@@ -9,6 +11,7 @@
   background-color: var(--color-black);
   cursor: pointer;
 }
+
 .imgIcon {
   width: 410px;
   position: relative;
@@ -16,11 +19,13 @@
   object-fit: cover;
   max-width: 100%;
 }
+
 .card1,
 .cardBackgroundIcon {
   position: absolute;
   margin: 0 !important;
 }
+
 .card1 {
   top: 80px;
   left: 125px;
@@ -34,6 +39,7 @@
   background-position: top;
   max-width: 100%;
 }
+
 .cardBackgroundIcon {
   height: 150px;
   width: 150px;
@@ -41,6 +47,7 @@
   left: 621px;
   object-fit: cover;
 }
+
 .testimonialCard,
 .testimonialCard1,
 .testimonialCard2 {
@@ -54,13 +61,16 @@
   bottom: 415px;
   left: 125px;
 }
+
 .testimonialCard1,
 .testimonialCard2 {
   bottom: 291px;
 }
+
 .testimonialCard2 {
   bottom: 167px;
 }
+
 .cards {
   height: 959px;
   flex: 1;
@@ -75,13 +85,16 @@
   max-width: 100%;
   z-index: 1;
 }
+
 .text {
   height: 20px;
   right: 95px;
   bottom: -12px;
   font-size: var(--font-size-9xl);
   cursor: pointer;
+  
 }
+
 .text,
 .text1,
 .text2,
@@ -89,18 +102,20 @@
 .text4,
 .text5 {
   position: absolute;
-  margin: 0 !important;
+  
   letter-spacing: 0.05em;
   display: inline-block;
   white-space: nowrap;
   z-index: 2;
 }
+
 .text1 {
   height: 20px;
   top: 319px;
   left: 600px;
   font-size: var(--font-size-9xl);
 }
+
 .text2,
 .text3,
 .text4,
@@ -108,21 +123,28 @@
   height: 17px;
   left: 125px;
 }
+
 .text2 {
-  top: 469px;
+  top: 450px;
+  
 }
+
 .text3,
 .text4,
 .text5 {
   bottom: 351px;
+  margin-bottom: 20px;
 }
+
 .text4,
 .text5 {
   bottom: 229px;
 }
+
 .text5 {
   bottom: 107px;
 }
+
 .testimonialContent,
 .testimonials {
   display: flex;
@@ -131,10 +153,12 @@
   justify-content: flex-start;
   max-width: 100%;
 }
+
 .testimonialContent {
   flex: 1;
   position: relative;
 }
+
 .testimonials {
   align-self: stretch;
   background-color: var(--color-gray-100);
@@ -146,6 +170,7 @@
   color: var(--color-white);
   font-family: var(--font-inter);
 }
+
 @media screen and (max-width: 1300px) {
   .testimonials {
     padding-top: var(--padding-36xl);
@@ -153,6 +178,7 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 800px) {
   .testimonials {
     padding-top: var(--padding-17xl);
@@ -160,6 +186,7 @@
     box-sizing: border-box;
   }
 }
+
 @media screen and (max-width: 450px) {
   .text,
   .text1 {
@@ -171,4 +198,50 @@
   .text5 {
     font-size: var(--font-size-lgi);
   }
+}
+
+/* Regras para o modo de alto contraste */
+:global(.highContrast) .testimonials {
+  background-color: #ffffff !important; /* Fundo branco */
+  color: #000000 !important;             /* Texto preto */
+  border: 2px solid #000000 !important; /* Borda preta */
+}
+
+:global(.highContrast) .testimonialBackground {
+  background-color: #ffffff !important; /* Fundo branco */
+}
+
+:global(.highContrast) .testimonialCard,
+:global(.highContrast) .testimonialCard1,
+:global(.highContrast) .testimonialCard2 {
+  background-color: #ffffff !important; /* Fundo branco */
+  color: #000000 !important;             /* Texto preto */
+  border: 2px solid #000000 !important; /* Borda preta */
+}
+
+:global(.highContrast) .text,
+:global(.highContrast) .text1,
+:global(.highContrast) .text2,
+:global(.highContrast) .text3,
+:global(.highContrast) .text4,
+:global(.highContrast) .text5 {
+  color: #000000 !important; /* Texto preto */
+}
+
+
+/* Remova filtros para outras imagens */
+:global(.highContrast) .imgIcon,
+:global(.highContrast) .lineIcon {
+  filter: none !important; /* Remove filtros invertidos */
+  /* background-color: #ffffff !important; */ /* Removido */
+  /* padding: 0.25rem !important; */           /* Removido */
+  border: 1px solid #000000 !important; /* Borda preta */
+}
+
+/* Ajuste específico para .cardBackgroundIcon */
+:global(.highContrast) .cardBackgroundIcon {
+  filter: invert(1) !important; /* Inverte a cor da imagem */
+  /* background-color: #ffffff !important; */ /* Removido */
+  /* padding: 0.25rem !important; */           /* Removido */
+  border: 1px solid #000000 !important; /* Borda preta */
 }
